@@ -13,11 +13,11 @@ struct BubblesUIView: View {
             
             VStack(alignment: .trailing, spacing: 10) {
                 
-                Image("BubblePoints") // aggiunta immagine BP
-                    .resizable()
-                    .frame(width: 100, height: 50, alignment: .topLeading)
-                    .padding()
-                    .offset(x: 145, y: -280)
+//                Image("BubblePoints") // aggiunta immagine BP
+//                    .resizable()
+//                    .frame(width: 100, height: 50, alignment: .topLeading)
+//                    .padding()
+//                    .offset(x: 145, y: -280)
                 
                 
                 // ZStack che contiene tutte le bolle
@@ -142,7 +142,6 @@ struct BubblesUIView: View {
                 }.padding() // END ZSTACK che contiene tutte le bolle
                 
             } // END VSTACK
-            
             .navigationTitle("Bubbles")
             .navigationBarItems(trailing: Image(systemName: "plus")).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
         } // END NavigationView

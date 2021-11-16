@@ -24,11 +24,13 @@ struct BubblePointsUIView: View {
                         Image(systemName: "heart.circle.fill")
                             .resizable()
                             .frame(width: 40, height: 40, alignment: .leading)
+                            .foregroundColor(.blue)
                         
                         Text("Family")
                             .fontWeight(.heavy)
                             .frame(width: 240, height: 30, alignment: .leading)
                             .font(.title)
+                            .foregroundColor(.blue)
                     } // END HStack celeste
                 } // ENS ZStack celeste
                 
@@ -54,17 +56,71 @@ struct BubblePointsUIView: View {
                 } // END ZStack arancione
                 
                 
-
+                // ZStack GIALLO (free time)
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
+                        .foregroundColor(Color.init(red: 1, green: 238/255, blue: 165/255, opacity: 100)) // giallo (free time)
+                    
+                    HStack {
+                        Image(systemName: "calendar.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .center)
+                            .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
+                        
+                        
+                        Text("Free Time")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
+                            .frame(width: 240, height: 30, alignment: .leading)
+                            .font(.title)
+                    } // END HStack giallo
+                } // END VSTACK giallo
                 
-                RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
-                    .foregroundColor(Color.init(red: 1, green: 238/255, blue: 165/255, opacity: 100)) // giallo (free time)
                 
-                RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
-                    .foregroundColor(Color.init(red: 1, green: 177/255, blue: 175/255, opacity: 100)) // rosso (friends)
+                // VStack ROSSO (Friends)
+                ZStack {
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
+                        .foregroundColor(Color.init(red: 1, green: 177/255, blue: 175/255, opacity: 100)) // rosso (friends)
+                    
+                    HStack {
+                        Image(systemName: "person.2.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .center)
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
+                            .offset(x: 0, y: -8)
+                        
+                        Text("Friends")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
+                            .offset(x: 0, y: -5)
+                            .frame(width: 240, height: 30, alignment: .leading)
+                            .font(.title)
+                    } // END HStack Rosso
+                } // END ZStack Rosso
                 
-                RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
-                    .foregroundColor(Color.init(red: 188/255, green: 248/255, blue: 143/255, opacity: 100)) // verde (extra)
                 
+                //ZStack Verde (Extra)
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
+                        .foregroundColor(Color.init(red: 188/255, green: 248/255, blue: 143/255, opacity: 100)) // verde (extra)
+                    
+                    HStack {
+                        Image(systemName: "star.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .center)
+                            .foregroundColor(Color.init(red: 100/255, green: 234/255, blue: 0))
+                        
+                        Text("Extra")
+                            .fontWeight(.heavy)
+                            .frame(width: 240, height: 30, alignment: .leading)
+                            .font(.title)
+                            .foregroundColor(Color.init(red: 100/255, green: 234/255, blue: 0))
+                    } // END HStack Verde
+                } // END ZStack Verde
 
                 
             }.padding() // END VStack che contiene tutto

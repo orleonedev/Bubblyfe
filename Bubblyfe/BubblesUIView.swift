@@ -57,13 +57,13 @@ struct BubblesUIView: View {
                             Image(systemName: "person.2.circle.fill")
                                 .resizable()
                                 .frame(width: 65, height: 65, alignment: .center)
-                                .foregroundColor(Color.init(red: 255/255, green: 6/255, blue: 0))
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
                         } // END ZSTACK ROSSO
                         
                         Text("Friends")
                             .font(.title)
                             .fontWeight(.heavy)
-                            .foregroundColor(Color(red: 255/255, green: 6/255, blue: 0))
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
                             .offset(x: 0, y: -8)
 
                         
@@ -72,24 +72,24 @@ struct BubblesUIView: View {
                     
                     
                     // Sovrapposizione icona/bolla CELESTE
-                    VStack {
+                    VStack(alignment: .leading, spacing: 2) {
                         ZStack {
+                            
                             Circle() // celeste
                                 .foregroundColor(Color.init(red: 194/255, green: 242/255, blue: 255/255, opacity: 100))              .frame(width: 88, height: 88, alignment: .center)
                             
                             Image(systemName: "heart.circle.fill")
                                 .resizable()
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .frame(width: 65, height: 65, alignment: .center)
-                                .foregroundColor(Color.init(red: 20/255, green: 47/255, blue: 255/255))
+                                
                         } // END ZSTACK celeste
                         
                         Text("Family")
                             .font(.title)
                             .fontWeight(.heavy)
-                            .foregroundColor(Color(red: 20/255, green: 47/255, blue: 255/255))
-                            .offset(x: 0, y: -8)
-
-                    }.offset(x: -100, y: -125) // END VSTACK celeste
+                            .foregroundColor(.blue)
+                    }.offset(x: -100, y: -130) // END VSTACK celeste
                     
                    
                     

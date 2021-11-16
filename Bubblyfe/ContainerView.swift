@@ -9,15 +9,17 @@ import SwiftUI
 
 struct ContainerView: View {
     var body: some View {
+        
         TabView {
             BubblesUIView().tabItem {
                 Image(systemName: "circle.hexagongrid.fill")
                 Text("Bubbles")
             }.tag(1)
             
-            Text("Second").tabItem {
+            ActivitiesUIView().tabItem {
                 Image(systemName: "square.fill.on.square.fill")
                 Text("Activities") }.tag(2)
+            
             Text("Third").tabItem {
                 Image(systemName: "book.closed.fill")
                 Text("Diary") }.tag(3)

@@ -13,10 +13,10 @@ struct NoBubbleUIView: View {
             NavigationView {
                 
                 VStack {
-                    Image("BubblePoints")
-                        .resizable()
-                        .frame(width: 100, height: 50, alignment: .topLeading)
-                        .offset(x: 145, y: -80)
+//                    Image("BubblePoints")
+//                        .resizable()
+//                        .frame(width: 100, height: 50, alignment: .topLeading)
+//                        .offset(x: 145, y: -80)
                     
                     ZStack { // Creazione fiore
                                                     

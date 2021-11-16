@@ -9,7 +9,20 @@ import SwiftUI
 
 struct LaunchscreenView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                HStack{
+                    Spacer()
+                    Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: 112, height: 48, alignment: .center)
+                }
+                
+                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2))
+                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: nil, height: 112, alignment: .center)
+            }
+            .padding()
+            .navigationTitle("")
+            
+        }
     }
 }
 

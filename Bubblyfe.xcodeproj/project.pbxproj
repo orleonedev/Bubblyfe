@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4763274E2743D04B00C19688 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274D2743D04A00C19688 /* ContainerView.swift */; };
 		476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274F2743D09800C19688 /* NoBubbleUIView.swift */; };
+		476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476327512743D18C00C19688 /* BubblePointsUIView.swift */; };
 		516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */; };
 		516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */; };
 		516CDCA22743C9CE00D12903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516CDCA12743C9CE00D12903 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		4763274D2743D04A00C19688 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		4763274F2743D09800C19688 /* NoBubbleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBubbleUIView.swift; sourceTree = "<group>"; };
+		476327512743D18C00C19688 /* BubblePointsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePointsUIView.swift; sourceTree = "<group>"; };
 		516CDC9A2743C9CD00D12903 /* Bubblyfe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubblyfe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeApp.swift; sourceTree = "<group>"; };
 		516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesUIView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				4763274D2743D04A00C19688 /* ContainerView.swift */,
 				4763274F2743D09800C19688 /* NoBubbleUIView.swift */,
 				516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */,
+				476327512743D18C00C19688 /* BubblePointsUIView.swift */,
 				516CDCA12743C9CE00D12903 /* Assets.xcassets */,
 				516CDCA32743C9CE00D12903 /* Preview Content */,
 			);
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */,
 				516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */,
 				476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */,
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,

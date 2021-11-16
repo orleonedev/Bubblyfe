@@ -11,13 +11,13 @@ struct BubblesUIView: View {
     var body: some View {
         NavigationView {
             
-            VStack(alignment: .trailing, spacing: 10) {
+            VStack(alignment: .center) {
                 
-//                Image("BubblePoints") // aggiunta immagine BP
-//                    .resizable()
-//                    .frame(width: 100, height: 50, alignment: .topLeading)
-//                    .padding()
-//                    .offset(x: 145, y: -280)
+                //                Image("BubblePoints") // aggiunta immagine BP
+                //                    .resizable()
+                //                    .frame(width: 100, height: 50, alignment: .topLeading)
+                //                    .padding()
+                //                    .offset(x: 145, y: -280)
                 
                 
                 // ZStack che contiene tutte le bolle
@@ -45,14 +45,14 @@ struct BubblesUIView: View {
                     } // END VStack Arancione
                     
                     
-
-                
+                    
+                    
                     // Sovrapposizione icona/bolla ROSSO
                     VStack{
                         ZStack {
                             Circle() // rosso
                                 .foregroundColor(Color.init(red: 1, green: 177/255, blue: 175/255, opacity: 100))                            .frame(width: 88, height: 88, alignment: .center)
-                                
+                            
                             
                             Image(systemName: "person.2.circle.fill")
                                 .resizable()
@@ -65,7 +65,7 @@ struct BubblesUIView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
                             .offset(x: 0, y: -8)
-
+                        
                         
                     }.offset(x: -100, y: +150) // END VSTACK ROSSO
                     
@@ -80,9 +80,9 @@ struct BubblesUIView: View {
                             
                             Image(systemName: "heart.circle.fill")
                                 .resizable()
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.blue)
                                 .frame(width: 65, height: 65, alignment: .center)
-                                
+                            
                         } // END ZSTACK celeste
                         
                         Text("Family")
@@ -91,7 +91,7 @@ struct BubblesUIView: View {
                             .foregroundColor(.blue)
                     }.offset(x: -100, y: -130) // END VSTACK celeste
                     
-                   
+                    
                     
                     // Sovrapposizione Icona/bolla VERDE
                     VStack {
@@ -103,7 +103,7 @@ struct BubblesUIView: View {
                                 .resizable()
                                 .frame(width: 65, height: 65, alignment: .center)
                                 .foregroundColor(Color.init(red: 100/255, green: 234/255, blue: 0))
-
+                            
                         }// END ZSTACK VERDE
                         
                         Text("Extra")
@@ -111,7 +111,7 @@ struct BubblesUIView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color(red: 100/255, green: 234/255, blue: 0/255))
                             .offset(x: 0, y: -8)
-
+                        
                     }
                     .offset(x: +100, y: +150) // END VSTACK VERDE
                     
@@ -134,7 +134,7 @@ struct BubblesUIView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color(red: 255/255, green: 207/255, blue: 0/255))
                             .offset(x: 0, y: -8)
-
+                        
                         
                     }
                     

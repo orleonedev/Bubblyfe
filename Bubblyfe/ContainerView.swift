@@ -11,7 +11,7 @@ struct ContainerView: View {
     var body: some View {
         
         TabView {
-            BubblesUIView().tabItem {
+            BubblesCopyUI().tabItem {
                 Image(systemName: "circle.hexagongrid.fill")
                 Text("Bubbles")
             }.tag(1)
@@ -23,7 +23,9 @@ struct ContainerView: View {
             Text("Third").tabItem {
                 Image(systemName: "book.closed.fill")
                 Text("Diary") }.tag(3)
+            
         }
+        
     }
 }
 

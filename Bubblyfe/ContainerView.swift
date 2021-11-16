@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContainerView: View {
     var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+        TabView {
             BubblesUIView().tabItem {
-                Image(systemName: "circle.hexagonpath.fill")
+                Image(systemName: "circle.hexagongrid.fill")
                 Text("Bubbles")
             }.tag(1)
             

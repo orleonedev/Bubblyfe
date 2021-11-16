@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4763274E2743D04B00C19688 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274D2743D04A00C19688 /* ContainerView.swift */; };
+		476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274F2743D09800C19688 /* NoBubbleUIView.swift */; };
 		516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */; };
-		516CDCA02743C9CD00D12903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9F2743C9CD00D12903 /* ContentView.swift */; };
+		516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */; };
 		516CDCA22743C9CE00D12903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516CDCA12743C9CE00D12903 /* Assets.xcassets */; };
 		516CDCA52743C9CE00D12903 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516CDCA42743C9CE00D12903 /* Preview Assets.xcassets */; };
 		516CDCAF2743C9CE00D12903 /* BubblyfeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCAE2743C9CE00D12903 /* BubblyfeTests.swift */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4763274D2743D04A00C19688 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		4763274F2743D09800C19688 /* NoBubbleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBubbleUIView.swift; sourceTree = "<group>"; };
 		516CDC9A2743C9CD00D12903 /* Bubblyfe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubblyfe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeApp.swift; sourceTree = "<group>"; };
-		516CDC9F2743C9CD00D12903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesUIView.swift; sourceTree = "<group>"; };
 		516CDCA12743C9CE00D12903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516CDCA42743C9CE00D12903 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		516CDCAA2743C9CE00D12903 /* BubblyfeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubblyfeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */,
-				516CDC9F2743C9CD00D12903 /* ContentView.swift */,
+				4763274D2743D04A00C19688 /* ContainerView.swift */,
+				4763274F2743D09800C19688 /* NoBubbleUIView.swift */,
+				516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */,
 				516CDCA12743C9CE00D12903 /* Assets.xcassets */,
 				516CDCA32743C9CE00D12903 /* Preview Content */,
 			);
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				516CDCA02743C9CD00D12903 /* ContentView.swift in Sources */,
+				516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */,
+				476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */,
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,
+				4763274E2743D04B00C19688 /* ContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

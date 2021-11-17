@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct ActivitiesUIView: View {
+    
+    @StateObject var bubblesStore = BubblesStore()
+    
     var body: some View {
-        
         NavigationView {
 
             VStack(alignment: .center, spacing: 15) {
                 
-                
+                List {
+                    ForEach(bubblesStore.bubbles) {
+                        bubble in
+                        HStack {
+                            Image(systemName: bubble.icon)
+                                .resizable()
+                                .frame(width: 28, height: 28, alignment: .center)
+                                .foregroundColor(bubble.iconColor)
+                            Text(bubble.category)
+                                .bold()
+                                .fontWeight(.light)
+                                .foregroundColor(bubble.iconColor)
+                        }
+                    }
+                }
             } // END VStack che contiene tutto
             
             .navigationTitle("Activities")

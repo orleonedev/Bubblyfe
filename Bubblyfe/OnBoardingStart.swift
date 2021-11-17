@@ -7,16 +7,30 @@
 
 import SwiftUI
 
+struct ContinueButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(.horizontal, 128)
+            .padding(.vertical)
+            .background(Color.cyan)
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+    }
+}
+
 struct OnBoardingStart: View {
+    @Binding var showOnboardModal: Bool
+    
     var body: some View {
         VStack{
-            Text("Welcome to \nBubblyfe")
+            Text("Welcome to\nBubblyfe")
                 .font(.largeTitle.bold())
                 .multilineTextAlignment(.center)
             
             HStack(alignment: .center, spacing: 18){
                 Image(systemName: "circle.hexagongrid.fill")
-                    .frame(width: 48, height: 48, alignment: .center)
+                    .font(.system(size: 48))
+                    .foregroundColor(.cyan)
                 
                 VStack(alignment: .leading, spacing: 4){
                     Text("Bubbles")
@@ -27,7 +41,8 @@ struct OnBoardingStart: View {
             }
             HStack(alignment: .center, spacing: 18){
                 Image(systemName: "circle.hexagongrid.fill")
-                    .frame(width: 48, height: 48, alignment: .center)
+                    .font(.system(size: 48))
+                    .foregroundColor(.cyan)
                 
                 VStack(alignment: .leading, spacing: 4){
                     Text("Bubbles")
@@ -38,7 +53,8 @@ struct OnBoardingStart: View {
             }
             HStack(alignment: .center, spacing: 18){
                 Image(systemName: "circle.hexagongrid.fill")
-                    .frame(width: 48, height: 48, alignment: .center)
+                    .font(.system(size: 48))
+                    .foregroundColor(.cyan)
                 
                 VStack(alignment: .leading, spacing: 4){
                     Text("Bubbles")
@@ -47,21 +63,23 @@ struct OnBoardingStart: View {
                 }
                 
             }
-            Text("To know more about...")
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Text("To know more about...")
+            }
             Button{
                 
             } label: {
                 Text("Continue")
-                    .padding(8)
+                    
             }
-            .frame(width: .infinity , height: 48, alignment: .center)
-            .buttonStyle(.bordered)
+            .buttonStyle(ContinueButton())
+            
         }
     }
 }
 
 struct OnBoardingStart_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingStart()
+        OnBoardingStart(showOnboardModal: .constant(true))
     }
 }

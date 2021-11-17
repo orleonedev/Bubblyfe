@@ -11,7 +11,7 @@ import SwiftUI
 struct BubblyfeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContainerView() // PRIMA SCHERMATA
+            LaunchscreenView() // PRIMA SCHERMATA
         }
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LaunchscreenView: View {
+    @State private var showOnboardModal = false
     var body: some View {
         NavigationView{
             VStack{
@@ -25,8 +26,11 @@ struct LaunchscreenView: View {
             .navigationTitle("")
             .onAppear{
                 print("KONO DIO DA")
+                showOnboardModal.toggle()
                 // inserire l'apparizione della modale
-            }
+            }.sheet(isPresented: $showOnboardModal, content: {
+                OnBoardingStart(showOnboardModal: $showOnboardModal)
+            })
            
         }
     }

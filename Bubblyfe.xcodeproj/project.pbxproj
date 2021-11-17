@@ -15,6 +15,7 @@
 		476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274F2743D09800C19688 /* NoBubbleUIView.swift */; };
 		476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476327512743D18C00C19688 /* BubblePointsUIView.swift */; };
 		478F9E86274422C600033A85 /* ActivitiesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F9E85274422C600033A85 /* ActivitiesUIView.swift */; };
+		510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D15162744EAAD00AC080E /* OnBoardingStart.swift */; };
 		511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BA6DF27440222009F7F1A /* LaunchscreenView.swift */; };
 		511BA6E227444BE9009F7F1A /* BubblesCopyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BA6E127444BE9009F7F1A /* BubblesCopyUI.swift */; };
 		516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */; };
@@ -52,6 +53,7 @@
 		4763274F2743D09800C19688 /* NoBubbleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBubbleUIView.swift; sourceTree = "<group>"; };
 		476327512743D18C00C19688 /* BubblePointsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePointsUIView.swift; sourceTree = "<group>"; };
 		478F9E85274422C600033A85 /* ActivitiesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesUIView.swift; sourceTree = "<group>"; };
+		510D15162744EAAD00AC080E /* OnBoardingStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStart.swift; sourceTree = "<group>"; };
 		511BA6DF27440222009F7F1A /* LaunchscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchscreenView.swift; sourceTree = "<group>"; };
 		511BA6E127444BE9009F7F1A /* BubblesCopyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesCopyUI.swift; sourceTree = "<group>"; };
 		516CDC9A2743C9CD00D12903 /* Bubblyfe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubblyfe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 				516CDCA32743C9CE00D12903 /* Preview Content */,
 				511BA6DF27440222009F7F1A /* LaunchscreenView.swift */,
 				511BA6E127444BE9009F7F1A /* BubblesCopyUI.swift */,
+				510D15162744EAAD00AC080E /* OnBoardingStart.swift */,
 			);
 			path = Bubblyfe;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				4718D26827453C2600315B5C /* ChooseBubbleItemUIView.swift in Sources */,
 				476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */,
 				4718D2642745207C00315B5C /* Bubble.swift in Sources */,
+				510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */,
 				516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */,
 				4718D26227451F4E00315B5C /* AddBubblesUIView.swift in Sources */,
 				478F9E86274422C600033A85 /* ActivitiesUIView.swift in Sources */,
@@ -459,11 +463,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bubblyfe/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,11 +493,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bubblyfe/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

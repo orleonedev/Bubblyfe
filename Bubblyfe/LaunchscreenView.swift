@@ -23,6 +23,10 @@ struct LaunchscreenView: View {
             }
             .padding()
             .navigationTitle("")
+            .onAppear{
+                print("KONO DIO DA")
+                // inserire l'apparizione della modale
+            }
            
         }
     }

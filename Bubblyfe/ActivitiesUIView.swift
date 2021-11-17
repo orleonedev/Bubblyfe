@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ActivitiesUIView: View {
     
-    @StateObject var bubblesStore = BubblesStore()
+    @StateObject var bubblesStore = BubblesStore() // lista di bubble item
+    @State private var bubbleSelection: String? // item selezionato
+    
     
     var body: some View {
         NavigationView {
 
             VStack(alignment: .center, spacing: 15) {
                 
-                List {
+                List { // creazione lista di item bubble
                     ForEach(bubblesStore.bubbles) {
                         bubble in
                         HStack {
@@ -29,7 +31,8 @@ struct ActivitiesUIView: View {
                                 .fontWeight(.light)
                                 .foregroundColor(bubble.iconColor)
                         }
-                    }
+                    } // END ForEach
+                    
                 }
             } // END VStack che contiene tutto
             

@@ -12,7 +12,7 @@ struct ContinueButton: ButtonStyle {
         configuration.label
             .padding(.horizontal, 128)
             .padding(.vertical)
-            .background(Color.teal)
+            .background(Color(red: 0.251, green: 0.796, blue: 0.878))
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 15))
     }
@@ -35,24 +35,26 @@ struct OnBoardingStart: View {
                 HStack(alignment: .center, spacing: 18){
                     Image(systemName: "circle.hexagongrid.fill")
                         .font(.system(size: 48))
-                        .foregroundColor(.teal)
+                        .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
                     
                     VStack(alignment: .leading, spacing: 4){
                         Text("Bubbles")
                             .font(.title2.bold())
                         Text("Balance your daily routine\nusing bubbles size.")
+                            .fontWeight(.thin)
                     }
                     
                 }
                 HStack(alignment: .center, spacing: 18){
                     Image(systemName: "book.closed.fill")
                         .font(.system(size: 48))
-                        .foregroundColor(.teal)
+                        .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
                     
                     VStack(alignment: .leading, spacing: 4){
                         Text("Diary")
                             .font(.title2.bold())
                         Text("Take track about\ncompleted activities and \ntake a moment to reflect.")
+                            .fontWeight(.thin)
                     }
                     
                 }
@@ -68,6 +70,7 @@ struct OnBoardingStart: View {
                         Text("Bubble Points")
                             .font(.title2.bold())
                         Text("Monitor your activities,\nmore points you have the \nlarger the bubbles.")
+                            .fontWeight(.thin)
                     }
                     
                 }
@@ -75,6 +78,7 @@ struct OnBoardingStart: View {
                 VStack{
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                         Text("To know more about...")
+                            .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
                     }
                     NavigationLink(destination: OnBoardingNoBubbles()){
                         Button{

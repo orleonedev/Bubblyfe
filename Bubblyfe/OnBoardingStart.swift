@@ -12,7 +12,7 @@ struct ContinueButton: ButtonStyle {
         configuration.label
             .padding(.horizontal, 128)
             .padding(.vertical)
-            .background(Color.cyan)
+            .background(Color.teal)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 15))
     }
@@ -22,59 +22,76 @@ struct OnBoardingStart: View {
     @Binding var showOnboardModal: Bool
     
     var body: some View {
-        VStack{
-            Text("Welcome to\nBubblyfe")
-                .font(.largeTitle.bold())
-                .multilineTextAlignment(.center)
+        
+        NavigationView{
             
-            HStack(alignment: .center, spacing: 18){
-                Image(systemName: "circle.hexagongrid.fill")
-                    .font(.system(size: 48))
-                    .foregroundColor(.cyan)
+            VStack(spacing: 32){
+                Spacer()
+                Text("Welcome to\nBubblyfe")
+                    .font(.largeTitle.bold())
+                    .multilineTextAlignment(.center)
+                Spacer()
                 
-                VStack(alignment: .leading, spacing: 4){
-                    Text("Bubbles")
-                        .font(.title2.bold())
-                    Text("Balance your daily routine\nusing bubbles size.")
-                }
-                
-            }
-            HStack(alignment: .center, spacing: 18){
-                Image(systemName: "circle.hexagongrid.fill")
-                    .font(.system(size: 48))
-                    .foregroundColor(.cyan)
-                
-                VStack(alignment: .leading, spacing: 4){
-                    Text("Bubbles")
-                        .font(.title2.bold())
-                    Text("Balance your daily routine\nusing bubbles size.")
-                }
-                
-            }
-            HStack(alignment: .center, spacing: 18){
-                Image(systemName: "circle.hexagongrid.fill")
-                    .font(.system(size: 48))
-                    .foregroundColor(.cyan)
-                
-                VStack(alignment: .leading, spacing: 4){
-                    Text("Bubbles")
-                        .font(.title2.bold())
-                    Text("Balance your daily routine\nusing bubbles size.")
-                }
-                
-            }
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                Text("To know more about...")
-            }
-            Button{
-                
-            } label: {
-                Text("Continue")
+                HStack(alignment: .center, spacing: 18){
+                    Image(systemName: "circle.hexagongrid.fill")
+                        .font(.system(size: 48))
+                        .foregroundColor(.teal)
                     
+                    VStack(alignment: .leading, spacing: 4){
+                        Text("Bubbles")
+                            .font(.title2.bold())
+                        Text("Balance your daily routine\nusing bubbles size.")
+                    }
+                    
+                }
+                HStack(alignment: .center, spacing: 18){
+                    Image(systemName: "book.closed.fill")
+                        .font(.system(size: 48))
+                        .foregroundColor(.teal)
+                    
+                    VStack(alignment: .leading, spacing: 4){
+                        Text("Diary")
+                            .font(.title2.bold())
+                        Text("Take track about\ncompleted activities and \ntake a moment to reflect.")
+                    }
+                    
+                }
+                HStack(alignment: .center, spacing: 18){
+                    Image("BubblePoints1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60, alignment: .center)
+                        
+                        
+                    
+                    VStack(alignment: .leading, spacing: 4){
+                        Text("Bubble Points")
+                            .font(.title2.bold())
+                        Text("Monitor your activities,\nmore points you have the \nlarger the bubbles.")
+                    }
+                    
+                }
+                Spacer()
+                VStack{
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        Text("To know more about...")
+                    }
+                    NavigationLink(destination: OnBoardingNoBubbles()){
+                        Button{
+                        } label: {
+                            Text("Continue")
+                        }
+                        .buttonStyle(ContinueButton())
+                    }
+                    
+                }
+                
+                
             }
-            .buttonStyle(ContinueButton())
-            
+            .navigationBarTitle("")
         }
+        .navigationViewStyle(.stack)
+        
     }
 }
 

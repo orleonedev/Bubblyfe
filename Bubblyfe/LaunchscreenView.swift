@@ -25,8 +25,7 @@ struct LaunchscreenView: View {
             .padding()
             .navigationTitle("")
             .onAppear{
-                print("KONO DIO DA")
-                showOnboardModal.toggle()
+                 showOnboardModal.toggle()
                 // inserire l'apparizione della modale
             }.sheet(isPresented: $showOnboardModal, content: {
                 OnBoardingStart(showOnboardModal: $showOnboardModal)

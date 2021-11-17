@@ -11,6 +11,7 @@
 		4718D2642745207C00315B5C /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D2632745207C00315B5C /* Bubble.swift */; };
 		4718D266274525FA00315B5C /* AddActivitiesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D265274525FA00315B5C /* AddActivitiesUIView.swift */; };
 		4718D26827453C2600315B5C /* ChooseBubbleItemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26727453C2600315B5C /* ChooseBubbleItemUIView.swift */; };
+		4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26927454F3A00315B5C /* BubblesStore.swift */; };
 		4763274E2743D04B00C19688 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274D2743D04A00C19688 /* ContainerView.swift */; };
 		476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274F2743D09800C19688 /* NoBubbleUIView.swift */; };
 		476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476327512743D18C00C19688 /* BubblePointsUIView.swift */; };
@@ -50,6 +51,7 @@
 		4718D2632745207C00315B5C /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		4718D265274525FA00315B5C /* AddActivitiesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitiesUIView.swift; sourceTree = "<group>"; };
 		4718D26727453C2600315B5C /* ChooseBubbleItemUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBubbleItemUIView.swift; sourceTree = "<group>"; };
+		4718D26927454F3A00315B5C /* BubblesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesStore.swift; sourceTree = "<group>"; };
 		4763274D2743D04A00C19688 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		4763274F2743D09800C19688 /* NoBubbleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBubbleUIView.swift; sourceTree = "<group>"; };
 		476327512743D18C00C19688 /* BubblePointsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePointsUIView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */,
 				476327512743D18C00C19688 /* BubblePointsUIView.swift */,
 				478F9E85274422C600033A85 /* ActivitiesUIView.swift */,
+				4718D26927454F3A00315B5C /* BubblesStore.swift */,
 				4718D26127451F4E00315B5C /* AddBubblesUIView.swift */,
 				4718D2632745207C00315B5C /* Bubble.swift */,
 				4718D265274525FA00315B5C /* AddActivitiesUIView.swift */,
@@ -300,6 +303,7 @@
 				516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */,
 				4718D26227451F4E00315B5C /* AddBubblesUIView.swift in Sources */,
 				478F9E86274422C600033A85 /* ActivitiesUIView.swift in Sources */,
+				4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */,
 				476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */,
 				511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */,
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,

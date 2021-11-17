@@ -10,10 +10,11 @@ import SwiftUI
 
 struct Bubble : Identifiable{
     
-    var id: ObjectIdentifier
+    let id = UUID()
     var category :String
-    var color :Color
-    var icon :Image
+    var cardColor :Color
+    var iconColor :Color
+    var icon :String
     var bubblePoints :Int
     
 }

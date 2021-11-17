@@ -48,7 +48,14 @@ struct OnBoardingStart: View {
                 
             }
             Text("To know more about...")
-            Button("Sign In", action: {}).buttonStyle(.bordered).background(.cyan)
+            Button{
+                
+            } label: {
+                Text("Continue")
+                    .padding(8)
+            }
+            .frame(width: .infinity , height: 48, alignment: .center)
+            .buttonStyle(.bordered)
         }
     }
 }

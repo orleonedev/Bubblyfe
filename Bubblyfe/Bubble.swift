@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Bubble : Identifiable{
+class Bubble : Identifiable, ObservableObject{
     
     let id = UUID()
     var category :String
@@ -16,5 +16,15 @@ struct Bubble : Identifiable{
     var iconColor :Color
     var icon :String
     var bubblePoints :Int
+    @Published var isActive :Bool
+    
+    internal init(category: String, cardColor :Color, iconColor :Color, icon :String, bubblePoints :Int, isActive :Bool) {
+        self.category = category
+        self.cardColor = cardColor
+        self.iconColor = iconColor
+        self.icon = icon
+        self.bubblePoints = bubblePoints
+        self.isActive = isActive
+    }
     
 }

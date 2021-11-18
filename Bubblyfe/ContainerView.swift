@@ -16,7 +16,7 @@ struct ContainerView: View {
                 Text("Bubbles")
             }.tag(1)
             
-            ActivitiesUIView().tabItem {
+            ChooseBubbleUIView().tabItem {
                 Image(systemName: "square.fill.on.square.fill")
                 Text("Activities") }.tag(2)
             

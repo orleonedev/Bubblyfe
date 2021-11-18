@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActivitiesUIView: View {
+struct ChooseBubbleUIView: View {
     
     @StateObject var bubblesStore = BubblesStore() // lista di bubble item
     @State private var bubbleSelection: String? // item selezionato
@@ -36,8 +36,9 @@ struct ActivitiesUIView: View {
                 }
             } // END VStack che contiene tutto
             
-            .navigationTitle("Activities")
-            .navigationBarItems(trailing: Image(systemName: "plus")).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
+            .navigationTitle("Bubble")
+            .navigationBarTitleDisplayMode(.inline)
+//            .navigationBarItems(trailing: Text("Done")).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
             
             
             
@@ -47,6 +48,6 @@ struct ActivitiesUIView: View {
 
 struct ActivitiesUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivitiesUIView()
+        ChooseBubbleUIView()
     }
 }

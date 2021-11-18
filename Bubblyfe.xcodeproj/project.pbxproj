@@ -27,6 +27,7 @@
 		516CDCBB2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCBA2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift */; };
 		51B42B6D274697D500F4EED8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B6C274697D500F4EED8 /* Activity.swift */; };
 		51B42B6F27469B7100F4EED8 /* ActivityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B6E27469B7100F4EED8 /* ActivityStore.swift */; };
+		51B42B712746AE9400F4EED8 /* OnBoardingSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B702746AE9400F4EED8 /* OnBoardingSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		516CDCBA2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		51B42B6C274697D500F4EED8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		51B42B6E27469B7100F4EED8 /* ActivityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStore.swift; sourceTree = "<group>"; };
+		51B42B702746AE9400F4EED8 /* OnBoardingSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				511BA6DF27440222009F7F1A /* LaunchscreenView.swift */,
 				510D15162744EAAD00AC080E /* OnBoardingStart.swift */,
 				510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */,
+				51B42B702746AE9400F4EED8 /* OnBoardingSelectionView.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				511BA6E227444BE9009F7F1A /* BubblesView.swift in Sources */,
 				51B42B6F27469B7100F4EED8 /* ActivityStore.swift in Sources */,
 				4718D266274525FA00315B5C /* AddActivitiesView.swift in Sources */,
+				51B42B712746AE9400F4EED8 /* OnBoardingSelectionView.swift in Sources */,
 				4763274E2743D04B00C19688 /* ContainerView.swift in Sources */,
 				510D1559274560D300AC080E /* OnBoardingNoBubbles.swift in Sources */,
 			);

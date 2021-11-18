@@ -7,17 +7,6 @@
 
 import SwiftUI
 
-struct ContinueButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding(.horizontal, 128)
-            .padding(.vertical)
-            .background(Color(red: 0.251, green: 0.796, blue: 0.878))
-            .foregroundColor(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-    }
-}
-
 
 struct OnBoardingStart: View {
     @Binding var showOnboardModal: Bool
@@ -93,7 +82,7 @@ struct OnBoardingStart: View {
                 
             }
         
-        }
+        }.navigationViewStyle(.stack)
     }
 }
 

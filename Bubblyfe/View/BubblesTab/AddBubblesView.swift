@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddBubbles: View {
+struct AddBubblesView: View {
     
     @StateObject var bubblesStore = BubblesStore() // lista di bubble item
     @State private var checkfamily :Bool = false
@@ -110,6 +110,6 @@ struct AddBubbles: View {
 
 struct ChooseBubbleItemUIView_Previews: PreviewProvider {
    static var previews: some View {
-      AddBubbles()
+      AddBubblesView()
     }
 }

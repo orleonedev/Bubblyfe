@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChooseBubbleUIView: View {
+struct ChooseBubbleView: View {
     
     @StateObject var bubblesStore = BubblesStore() // lista di bubble item
     @State private var bubbleSelection: String? // item selezionato
@@ -51,6 +51,6 @@ struct ChooseBubbleUIView: View {
 
 struct ActivitiesUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseBubbleUIView()
+        ChooseBubbleView()
     }
 }

@@ -34,15 +34,26 @@ struct OnBoardingNoBubbles: View {
                 }
                 .padding(.bottom,65)
                 
-                VStack{
+                VStack(spacing: 12){
                     Text("Let's add Some Bubbles!")
                         .font(.title2.bold())
-                    Text("Monitor your activities, more points you have the larger the bubbles.")
+                    
+                    Text("Have you ever thought you could measure\nyour life through Bubbles?")
                         .fontWeight(.thin)
-                    Text("Monitor your activities, more points you have the larger the bubbles.")
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Monitor your activities, more points you\nhave the larger the bubbles.")
                         .fontWeight(.thin)
-                }
-                
+                        .multilineTextAlignment(.center)
+                    
+                }.padding(32)
+                NavigationLink(destination: AddBubblesView(), label: {
+                    Text("Continue")
+                        .padding(.horizontal, 128)
+                        .padding(.vertical)
+                        .foregroundColor(.white)
+                        .background(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                })
             }
             
         }

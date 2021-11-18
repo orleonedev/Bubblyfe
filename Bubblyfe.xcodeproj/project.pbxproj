@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E85376627466C3300FA6E05 /* Activitiesv2UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */; };
 		4718D2642745207C00315B5C /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D2632745207C00315B5C /* Bubble.swift */; };
 		4718D266274525FA00315B5C /* AddActivitiesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D265274525FA00315B5C /* AddActivitiesUIView.swift */; };
 		4718D26827453C2600315B5C /* AddBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26727453C2600315B5C /* AddBubbles.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitiesv2UIView.swift; sourceTree = "<group>"; };
 		4718D2632745207C00315B5C /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		4718D265274525FA00315B5C /* AddActivitiesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitiesUIView.swift; sourceTree = "<group>"; };
 		4718D26727453C2600315B5C /* AddBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBubbles.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				511BA6E127444BE9009F7F1A /* BubblesCopyUI.swift */,
 				510D15162744EAAD00AC080E /* OnBoardingStart.swift */,
 				510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */,
+				3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */,
 			);
 			path = Bubblyfe;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4718D26827453C2600315B5C /* AddBubbles.swift in Sources */,
+				3E85376627466C3300FA6E05 /* Activitiesv2UIView.swift in Sources */,
 				476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */,
 				4718D2642745207C00315B5C /* Bubble.swift in Sources */,
 				510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BubblesCopyUI: View {
+struct BubblesView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .center, spacing: 18){
@@ -133,6 +133,6 @@ struct BubblesCopyUI: View {
 
 struct BubblesCopyUI_Previews: PreviewProvider {
     static var previews: some View {
-        BubblesCopyUI()
+        BubblesView()
     }
 }

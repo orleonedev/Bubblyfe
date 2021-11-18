@@ -47,7 +47,7 @@ struct OnBoardingNoBubbles: View {
                         .multilineTextAlignment(.center)
                     
                 }.padding(32)
-                NavigationLink(destination: AddBubbles(), label: {
+                NavigationLink(destination: AddBubblesView(), label: {
                     Text("Continue")
                         .padding(.horizontal, 128)
                         .padding(.vertical)

@@ -9,19 +9,17 @@
 /* Begin PBXBuildFile section */
 		3E85376627466C3300FA6E05 /* Activitiesv2UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */; };
 		4718D2642745207C00315B5C /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D2632745207C00315B5C /* Bubble.swift */; };
-		4718D266274525FA00315B5C /* AddActivitiesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D265274525FA00315B5C /* AddActivitiesUIView.swift */; };
-		4718D26827453C2600315B5C /* AddBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26727453C2600315B5C /* AddBubbles.swift */; };
+		4718D266274525FA00315B5C /* AddActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D265274525FA00315B5C /* AddActivitiesView.swift */; };
+		4718D26827453C2600315B5C /* AddBubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26727453C2600315B5C /* AddBubblesView.swift */; };
 		4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26927454F3A00315B5C /* BubblesStore.swift */; };
 		4763274E2743D04B00C19688 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274D2743D04A00C19688 /* ContainerView.swift */; };
-		476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274F2743D09800C19688 /* NoBubbleUIView.swift */; };
-		476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476327512743D18C00C19688 /* BubblePointsUIView.swift */; };
-		478F9E86274422C600033A85 /* ChooseBubbleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F9E85274422C600033A85 /* ChooseBubbleUIView.swift */; };
+		476327522743D18C00C19688 /* BubblePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476327512743D18C00C19688 /* BubblePointsView.swift */; };
+		478F9E86274422C600033A85 /* ChooseBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F9E85274422C600033A85 /* ChooseBubbleView.swift */; };
 		510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D15162744EAAD00AC080E /* OnBoardingStart.swift */; };
 		510D1559274560D300AC080E /* OnBoardingNoBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */; };
 		511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BA6DF27440222009F7F1A /* LaunchscreenView.swift */; };
-		511BA6E227444BE9009F7F1A /* BubblesCopyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BA6E127444BE9009F7F1A /* BubblesCopyUI.swift */; };
+		511BA6E227444BE9009F7F1A /* BubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BA6E127444BE9009F7F1A /* BubblesView.swift */; };
 		516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */; };
-		516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */; };
 		516CDCA22743C9CE00D12903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516CDCA12743C9CE00D12903 /* Assets.xcassets */; };
 		516CDCA52743C9CE00D12903 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516CDCA42743C9CE00D12903 /* Preview Assets.xcassets */; };
 		516CDCAF2743C9CE00D12903 /* BubblyfeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCAE2743C9CE00D12903 /* BubblyfeTests.swift */; };
@@ -49,20 +47,18 @@
 /* Begin PBXFileReference section */
 		3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitiesv2UIView.swift; sourceTree = "<group>"; };
 		4718D2632745207C00315B5C /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
-		4718D265274525FA00315B5C /* AddActivitiesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitiesUIView.swift; sourceTree = "<group>"; };
-		4718D26727453C2600315B5C /* AddBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBubbles.swift; sourceTree = "<group>"; };
+		4718D265274525FA00315B5C /* AddActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitiesView.swift; sourceTree = "<group>"; };
+		4718D26727453C2600315B5C /* AddBubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBubblesView.swift; sourceTree = "<group>"; };
 		4718D26927454F3A00315B5C /* BubblesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesStore.swift; sourceTree = "<group>"; };
 		4763274D2743D04A00C19688 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
-		4763274F2743D09800C19688 /* NoBubbleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBubbleUIView.swift; sourceTree = "<group>"; };
-		476327512743D18C00C19688 /* BubblePointsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePointsUIView.swift; sourceTree = "<group>"; };
-		478F9E85274422C600033A85 /* ChooseBubbleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBubbleUIView.swift; sourceTree = "<group>"; };
+		476327512743D18C00C19688 /* BubblePointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePointsView.swift; sourceTree = "<group>"; };
+		478F9E85274422C600033A85 /* ChooseBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBubbleView.swift; sourceTree = "<group>"; };
 		510D15162744EAAD00AC080E /* OnBoardingStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStart.swift; sourceTree = "<group>"; };
 		510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingNoBubbles.swift; sourceTree = "<group>"; };
 		511BA6DF27440222009F7F1A /* LaunchscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchscreenView.swift; sourceTree = "<group>"; };
-		511BA6E127444BE9009F7F1A /* BubblesCopyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesCopyUI.swift; sourceTree = "<group>"; };
+		511BA6E127444BE9009F7F1A /* BubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesView.swift; sourceTree = "<group>"; };
 		516CDC9A2743C9CD00D12903 /* Bubblyfe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubblyfe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeApp.swift; sourceTree = "<group>"; };
-		516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesUIView.swift; sourceTree = "<group>"; };
 		516CDCA12743C9CE00D12903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516CDCA42743C9CE00D12903 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		516CDCAA2743C9CE00D12903 /* BubblyfeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubblyfeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +93,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5153BCD627467341008B1705 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4718D26927454F3A00315B5C /* BubblesStore.swift */,
+				4718D2632745207C00315B5C /* Bubble.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5153BCD72746735C008B1705 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5153BCDA27467559008B1705 /* NewActivity */,
+				5153BCD927467495008B1705 /* BubblesTab */,
+				5153BCD827467402008B1705 /* OnBoarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5153BCD827467402008B1705 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				511BA6DF27440222009F7F1A /* LaunchscreenView.swift */,
+				510D15162744EAAD00AC080E /* OnBoardingStart.swift */,
+				510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		5153BCD927467495008B1705 /* BubblesTab */ = {
+			isa = PBXGroup;
+			children = (
+				476327512743D18C00C19688 /* BubblePointsView.swift */,
+				511BA6E127444BE9009F7F1A /* BubblesView.swift */,
+				4718D26727453C2600315B5C /* AddBubblesView.swift */,
+			);
+			path = BubblesTab;
+			sourceTree = "<group>";
+		};
+		5153BCDA27467559008B1705 /* NewActivity */ = {
+			isa = PBXGroup;
+			children = (
+				478F9E85274422C600033A85 /* ChooseBubbleView.swift */,
+				4718D265274525FA00315B5C /* AddActivitiesView.swift */,
+			);
+			path = NewActivity;
+			sourceTree = "<group>";
+		};
 		516CDC912743C9CD00D12903 = {
 			isa = PBXGroup;
 			children = (
@@ -120,22 +164,12 @@
 		516CDC9C2743C9CD00D12903 /* Bubblyfe */ = {
 			isa = PBXGroup;
 			children = (
+				5153BCD72746735C008B1705 /* View */,
+				5153BCD627467341008B1705 /* Model */,
 				516CDC9D2743C9CD00D12903 /* BubblyfeApp.swift */,
 				4763274D2743D04A00C19688 /* ContainerView.swift */,
-				4763274F2743D09800C19688 /* NoBubbleUIView.swift */,
-				516CDC9F2743C9CD00D12903 /* BubblesUIView.swift */,
-				476327512743D18C00C19688 /* BubblePointsUIView.swift */,
-				478F9E85274422C600033A85 /* ChooseBubbleUIView.swift */,
-				4718D26927454F3A00315B5C /* BubblesStore.swift */,
-				4718D2632745207C00315B5C /* Bubble.swift */,
-				4718D265274525FA00315B5C /* AddActivitiesUIView.swift */,
-				4718D26727453C2600315B5C /* AddBubbles.swift */,
 				516CDCA12743C9CE00D12903 /* Assets.xcassets */,
 				516CDCA32743C9CE00D12903 /* Preview Content */,
-				511BA6DF27440222009F7F1A /* LaunchscreenView.swift */,
-				511BA6E127444BE9009F7F1A /* BubblesCopyUI.swift */,
-				510D15162744EAAD00AC080E /* OnBoardingStart.swift */,
-				510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */,
 				3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */,
 			);
 			path = Bubblyfe;
@@ -296,19 +330,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4718D26827453C2600315B5C /* AddBubbles.swift in Sources */,
+				4718D26827453C2600315B5C /* AddBubblesView.swift in Sources */,
 				3E85376627466C3300FA6E05 /* Activitiesv2UIView.swift in Sources */,
-				476327522743D18C00C19688 /* BubblePointsUIView.swift in Sources */,
+				476327522743D18C00C19688 /* BubblePointsView.swift in Sources */,
 				4718D2642745207C00315B5C /* Bubble.swift in Sources */,
 				510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */,
-				516CDCA02743C9CD00D12903 /* BubblesUIView.swift in Sources */,
-				478F9E86274422C600033A85 /* ChooseBubbleUIView.swift in Sources */,
+				478F9E86274422C600033A85 /* ChooseBubbleView.swift in Sources */,
 				4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */,
-				476327502743D09800C19688 /* NoBubbleUIView.swift in Sources */,
 				511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */,
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,
-				511BA6E227444BE9009F7F1A /* BubblesCopyUI.swift in Sources */,
-				4718D266274525FA00315B5C /* AddActivitiesUIView.swift in Sources */,
+				511BA6E227444BE9009F7F1A /* BubblesView.swift in Sources */,
+				4718D266274525FA00315B5C /* AddActivitiesView.swift in Sources */,
 				4763274E2743D04B00C19688 /* ContainerView.swift in Sources */,
 				510D1559274560D300AC080E /* OnBoardingNoBubbles.swift in Sources */,
 			);

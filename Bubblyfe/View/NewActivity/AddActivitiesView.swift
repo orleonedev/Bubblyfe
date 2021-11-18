@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddActivitiesUIView: View {
+struct AddActivitiesView: View {
     
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
     @State private var ActivityTitle = "" // Variabile di stato per inserimento nome attività
@@ -22,7 +22,7 @@ struct AddActivitiesUIView: View {
                 
                 Section {
                     List {
-                        NavigationLink(destination: ChooseBubbleUIView()) {
+                        NavigationLink(destination: ChooseBubbleView()) {
                             Text("Bubble")
                         }
                     }
@@ -49,6 +49,6 @@ struct AddActivitiesUIView: View {
 
 struct AddActivitiesUIView_Previews: PreviewProvider {
     static var previews: some View {
-        AddActivitiesUIView()
+        AddActivitiesView()
     }
 }

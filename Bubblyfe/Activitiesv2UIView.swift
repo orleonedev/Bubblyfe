@@ -6,20 +6,20 @@
 //
 
 import SwiftUI
-
-struct Activitiesv2UIView: View {
-    var body: some View {
-        ForEach(0..<2){i in
-            cardView(body(i))
-        }
-    }
-}
-
-struct Activitiesv2UIView_Previews: PreviewProvider {
-    static var previews: some View {
-        Activitiesv2UIView()
-    }
-}
+//
+//struct Activitiesv2UIView: View {
+//    var body: some View {
+//        ForEach(0..<2){i in
+//            cardView(body(i))
+//        }
+//    }
+//}
+//
+//struct Activitiesv2UIView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Activitiesv2UIView()
+//    }
+//}
 
 struct cardView: View {
     

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BubblePointsUIView: View {
+struct BubblePointsView: View {
     var body: some View {
         
         NavigationView {
@@ -133,6 +133,6 @@ struct BubblePointsUIView: View {
 
 struct BubblePointsUIView_Previews: PreviewProvider {
     static var previews: some View {
-        BubblePointsUIView()
+        BubblePointsView()
     }
 }

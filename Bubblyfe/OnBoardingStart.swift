@@ -18,14 +18,14 @@ struct ContinueButton: ButtonStyle {
     }
 }
 
+
 struct OnBoardingStart: View {
     @Binding var showOnboardModal: Bool
     
     var body: some View {
         
         NavigationView{
-            
-            VStack(spacing: 32){
+            VStack(spacing: 28){
                 Spacer()
                 Text("Welcome to\nBubblyfe")
                     .font(.largeTitle.bold())
@@ -62,9 +62,9 @@ struct OnBoardingStart: View {
                     Image("BubblePoints1")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 60, height: 60, alignment: .center)
-                        
-                        
+                        .frame(width: 50, height: 50, alignment: .center)
+                    
+                    
                     
                     VStack(alignment: .leading, spacing: 4){
                         Text("Bubble Points")
@@ -76,26 +76,24 @@ struct OnBoardingStart: View {
                 }
                 Spacer()
                 VStack{
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {}) {
                         Text("To know more about...")
                             .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
                     }
-                    NavigationLink(destination: OnBoardingNoBubbles()){
-                        Button{
-                        } label: {
-                            Text("Continue")
-                        }
-                        .buttonStyle(ContinueButton())
-                    }
+                    NavigationLink(destination: OnBoardingNoBubbles(), label: {
+                        Text("Continue")
+                            .padding(.horizontal, 128)
+                            .padding(.vertical)
+                            .foregroundColor(.white)
+                            .background(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    })
                     
                 }
                 
                 
             }
-            .navigationBarTitle("")
-        }
-        .navigationViewStyle(.stack)
         
+        }
     }
 }
 

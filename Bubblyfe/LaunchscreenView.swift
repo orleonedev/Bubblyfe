@@ -28,7 +28,7 @@ struct LaunchscreenView: View {
                  showOnboardModal.toggle()
                 // inserire l'apparizione della modale
             }.sheet(isPresented: $showOnboardModal, content: {
-                OnBoardingStart(showOnboardModal: $showOnboardModal)
+                    OnBoardingStart(showOnboardModal: $showOnboardModal)
             })
            
         }

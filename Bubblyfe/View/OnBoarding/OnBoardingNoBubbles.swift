@@ -63,6 +63,8 @@ struct OnBoardingNoBubbles: View {
 
 struct OnBoardingNoBubbles_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView{
         OnBoardingNoBubbles()
+        }
     }
 }

@@ -46,7 +46,6 @@ struct ChooseBubbleView: View {
             
         } // END NAVIGATION VIEW
     }
-}
 
 
 struct ActivitiesUIView_Previews: PreviewProvider {

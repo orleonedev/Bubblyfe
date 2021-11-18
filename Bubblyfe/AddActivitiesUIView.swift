@@ -22,7 +22,7 @@ struct AddActivitiesUIView: View {
                 
                 Section {
                     List {
-                        NavigationLink(destination: ChooseBubbleItemUIView()) {
+                        NavigationLink(destination: ChooseBubbleUIView()) {
                             Text("Bubble")
                         }
                     }

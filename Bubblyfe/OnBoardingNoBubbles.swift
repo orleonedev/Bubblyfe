@@ -17,7 +17,6 @@ struct OnBoardingNoBubbles: View {
                         .foregroundColor(Color.init(red: 1, green: 203/255, blue: 165/255, opacity: 100))                            .frame(width: 88, height: 88)
                         .offset(x: +45, y:-45)
                         
-                       
                     Circle() // rosso
                         .foregroundColor(Color.init(red: 1, green: 177/255, blue: 175/255, opacity: 100))                            .frame(width: 88, height: 88, alignment: .center)
                         .offset(x: -45, y: +45)
@@ -32,6 +31,16 @@ struct OnBoardingNoBubbles: View {
                     
                     Circle() // giallo
                         .foregroundColor(Color.init(red: 1, green: 238/255, blue: 165/255, opacity: 100))                            .frame(width: 88, height: 88, alignment: .center)
+                }
+                .padding(.bottom,65)
+                
+                VStack{
+                    Text("Let's add Some Bubbles!")
+                        .font(.title2.bold())
+                    Text("Monitor your activities, more points you have the larger the bubbles.")
+                        .fontWeight(.thin)
+                    Text("Monitor your activities, more points you have the larger the bubbles.")
+                        .fontWeight(.thin)
                 }
                 
             }

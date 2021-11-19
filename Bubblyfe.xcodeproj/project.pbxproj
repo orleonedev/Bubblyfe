@@ -25,6 +25,8 @@
 		516CDCAF2743C9CE00D12903 /* BubblyfeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCAE2743C9CE00D12903 /* BubblyfeTests.swift */; };
 		516CDCB92743C9CE00D12903 /* BubblyfeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCB82743C9CE00D12903 /* BubblyfeUITests.swift */; };
 		516CDCBB2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCBA2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift */; };
+		51B42B6D274697D500F4EED8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B6C274697D500F4EED8 /* Activity.swift */; };
+		51B42B6F27469B7100F4EED8 /* ActivityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B6E27469B7100F4EED8 /* ActivityStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		516CDCB42743C9CE00D12903 /* BubblyfeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubblyfeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		516CDCB82743C9CE00D12903 /* BubblyfeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeUITests.swift; sourceTree = "<group>"; };
 		516CDCBA2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51B42B6C274697D500F4EED8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		51B42B6E27469B7100F4EED8 /* ActivityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				4718D26927454F3A00315B5C /* BubblesStore.swift */,
 				4718D2632745207C00315B5C /* Bubble.swift */,
+				51B42B6C274697D500F4EED8 /* Activity.swift */,
+				51B42B6E27469B7100F4EED8 /* ActivityStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			files = (
 				4718D26827453C2600315B5C /* AddBubblesView.swift in Sources */,
 				3E85376627466C3300FA6E05 /* Activitiesv2UIView.swift in Sources */,
+				51B42B6D274697D500F4EED8 /* Activity.swift in Sources */,
 				476327522743D18C00C19688 /* BubblePointsView.swift in Sources */,
 				4718D2642745207C00315B5C /* Bubble.swift in Sources */,
 				510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */,
@@ -340,6 +347,7 @@
 				511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */,
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,
 				511BA6E227444BE9009F7F1A /* BubblesView.swift in Sources */,
+				51B42B6F27469B7100F4EED8 /* ActivityStore.swift in Sources */,
 				4718D266274525FA00315B5C /* AddActivitiesView.swift in Sources */,
 				4763274E2743D04B00C19688 /* ContainerView.swift in Sources */,
 				510D1559274560D300AC080E /* OnBoardingNoBubbles.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContainerView: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
     var body: some View {
         
         TabView {
@@ -31,6 +32,6 @@ struct ContainerView: View {
 
 struct ContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        ContainerView()
+        ContainerView().environmentObject(BubblesStore())
     }
 }

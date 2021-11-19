@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct OnBoardingStart: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
     @Binding var showOnboardModal: Bool
     
     var body: some View {
@@ -44,6 +45,7 @@ struct OnBoardingStart: View {
                             .font(.title2.bold())
                         Text("Take track about\ncompleted activities and \ntake a moment to reflect.")
                             .fontWeight(.thin)
+                            .allowsTightening(true)
                     }
                     
                 }
@@ -69,7 +71,7 @@ struct OnBoardingStart: View {
                         Text("To know more about...")
                             .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
                     }
-                    NavigationLink(destination: OnBoardingNoBubbles(), label: {
+                    NavigationLink(destination: OnBoardingNoBubbles(showModal: $showOnboardModal).environmentObject(bubbleStore), label: {
                         Text("Continue")
                             .padding(.horizontal, 128)
                             .padding(.vertical)
@@ -88,6 +90,6 @@ struct OnBoardingStart: View {
 
 struct OnBoardingStart_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingStart(showOnboardModal: .constant(true))
+        OnBoardingStart(showOnboardModal: .constant(true)).environmentObject(BubblesStore())
     }
 }

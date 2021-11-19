@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BubblesView: View {
+    
     var body: some View {
         NavigationView{
             VStack(alignment: .center, spacing: 18){
@@ -50,7 +51,7 @@ struct BubblesView: View {
                             Image(systemName: "books.vertical.circle.fill")
                                 .resizable()
                                 .frame(width: 48, height: 48, alignment: .center)
-                                .foregroundColor(Color.init(red: 255/255, green: 110/255, blue: 4/255))
+                                .foregroundColor(Color("StudyIcon"))
                         }
                         Text("Study")
                             .font(.title)

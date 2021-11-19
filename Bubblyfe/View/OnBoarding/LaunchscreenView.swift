@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LaunchscreenView: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
     @State private var showOnboardModal = false
+    @State var startView = false
     var body: some View {
         NavigationView{
             VStack{
@@ -25,18 +27,25 @@ struct LaunchscreenView: View {
             .padding()
             .navigationTitle("")
             .onAppear{
-                 showOnboardModal.toggle()
-                // inserire l'apparizione della modale
-            }.sheet(isPresented: $showOnboardModal, content: {
-                    OnBoardingStart(showOnboardModal: $showOnboardModal)
+                 showOnboardModal.toggle()                // inserire l'apparizione della modale
+            }.sheet(isPresented: $showOnboardModal, onDismiss: {
+                startView.toggle()
+            }  , content: {
+                OnBoardingStart(showOnboardModal: $showOnboardModal).environmentObject(bubbleStore)
             })
+//                .fullScreenCover(isPresented: $startView){
+//                    ContainerView().environmentObject(bubbleStore)
+//                }
            
         }
     }
+    
 }
+
+
 
 struct LaunchscreenView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchscreenView()
+        LaunchscreenView().environmentObject(BubblesStore())
     }
 }

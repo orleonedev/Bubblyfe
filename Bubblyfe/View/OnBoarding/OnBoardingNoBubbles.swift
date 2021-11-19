@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OnBoardingNoBubbles: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
+    @Binding var showModal: Bool
     var body: some View {
         
             VStack{
@@ -47,7 +49,7 @@ struct OnBoardingNoBubbles: View {
                         .multilineTextAlignment(.center)
                     
                 }.padding(32)
-                NavigationLink(destination: OnBoardingSelectionView(), label: {
+                NavigationLink(destination: OnBoardingSelectionView(showModal: $showModal).environmentObject(bubbleStore), label: {
                     Text("Continue")
                         .padding(.horizontal, 128)
                         .padding(.vertical)
@@ -64,7 +66,7 @@ struct OnBoardingNoBubbles: View {
 struct OnBoardingNoBubbles_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-        OnBoardingNoBubbles()
+            OnBoardingNoBubbles(showModal: .constant(true)).environmentObject(BubblesStore())
         }
     }
 }

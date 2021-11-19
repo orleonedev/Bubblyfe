@@ -27,15 +27,15 @@ struct LaunchscreenView: View {
             .padding()
             .navigationTitle("")
             .onAppear{
-                 showOnboardModal.toggle()                // inserire l'apparizione della modale
+                 showOnboardModal.toggle()
             }.sheet(isPresented: $showOnboardModal, onDismiss: {
                 startView.toggle()
             }  , content: {
                 OnBoardingStart(showOnboardModal: $showOnboardModal).environmentObject(bubbleStore)
             })
-//                .fullScreenCover(isPresented: $startView){
-//                    ContainerView().environmentObject(bubbleStore)
-//                }
+                .fullScreenCover(isPresented: $startView){
+                    ContainerView().environmentObject(bubbleStore)
+                }
            
         }
     }

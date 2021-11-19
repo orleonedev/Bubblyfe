@@ -15,14 +15,14 @@ struct OnBoardingStart: View {
     var body: some View {
         
         NavigationView{
-            VStack(spacing: 28){
+            VStack(spacing: 20){
                 Spacer()
                 Text("Welcome to\nBubblyfe")
                     .font(.largeTitle.bold())
                     .multilineTextAlignment(.center)
                 Spacer()
                 
-                HStack(alignment: .center, spacing: 18){
+                HStack(alignment: .center, spacing: 12){
                     Image(systemName: "circle.hexagongrid.fill")
                         .font(.system(size: 48))
                         .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
@@ -35,7 +35,7 @@ struct OnBoardingStart: View {
                     }
                     
                 }
-                HStack(alignment: .center, spacing: 18){
+                HStack(alignment: .center, spacing: 12){
                     Image(systemName: "book.closed.fill")
                         .font(.system(size: 48))
                         .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
@@ -49,7 +49,7 @@ struct OnBoardingStart: View {
                     }
                     
                 }
-                HStack(alignment: .center, spacing: 18){
+                HStack(alignment: .center, spacing: 12){
                     Image("BubblePoints1")
                         .resizable()
                         .scaledToFit()

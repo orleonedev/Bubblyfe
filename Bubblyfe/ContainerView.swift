@@ -10,22 +10,20 @@ import SwiftUI
 struct ContainerView: View {
     var body: some View {
         
-        TabView {
-            BubblesView().tabItem {
-                Image(systemName: "circle.hexagongrid.fill")
-                Text("Bubbles")
-            }.tag(1)
-            
-            ChooseBubbleView().tabItem {
-                Image(systemName: "square.fill.on.square.fill")
-                Text("Activities") }.tag(2)
-            
-            Text("Third").tabItem {
-                Image(systemName: "book.closed.fill")
-                Text("Diary") }.tag(3)
-            
-        }
-        
+                    TabView {
+                    BubblesView().tabItem {
+                        Image(systemName: "circle.hexagongrid.fill")
+                        Text("Bubbles")
+                    }.tag(1)
+                    
+                    ChooseBubbleView().tabItem {
+                        Image(systemName: "square.fill.on.square.fill")
+                        Text("Activities") }.tag(2)
+                    
+                    Text("Third").tabItem {
+                        Image(systemName: "book.closed.fill")
+                        Text("Diary") }.tag(3)
+                }
     }
 }
 

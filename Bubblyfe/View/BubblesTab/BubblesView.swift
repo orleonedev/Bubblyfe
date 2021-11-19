@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct BubblesView: View {
+    
+    @State var showAddActivityModal :Bool = false
+    @State var showAddBubbleModal :Bool = false
+    
     var body: some View {
+        
         NavigationView{
             VStack(alignment: .center, spacing: 18){
                 HStack{
@@ -125,8 +130,21 @@ struct BubblesView: View {
                 
                 
             }.padding()
-            .navigationTitle("Bubbles")
-            .navigationBarItems(trailing: Image(systemName: "plus")).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
+                .navigationTitle("Bubbles") // aggiunta titolo
+                .toolbar { // aggiunta menù
+                     ToolbarItem(placement: .navigationBarTrailing) {
+                         Menu(content: {
+                             Button("Add Bubbles", action:  {
+                                 showAddBubbleModal.toggle()
+                             }).sheet(isPresented: $showAddBubbleModal, content: {
+                                 AddBubblesView(showAddBubbleModal: $showAddBubbleModal)
+                         })
+                             Button("Add Activity", action: { showAddActivityModal.toggle()})
+                            
+                         }, label: {
+                             Image(systemName: "plus").imageScale(.large).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))})
+                      }
+                  }
         }
     }
 }

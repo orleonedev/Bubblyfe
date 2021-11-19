@@ -15,6 +15,7 @@ struct AddBubblesView: View {
     @State private var checkFreeTime :Bool = false
     @State private var checkFriends :Bool = false
     @State private var checkExtra :Bool = false
+    @Binding var showAddBubbleModal: Bool
     
         var body: some View {
         NavigationView {
@@ -108,8 +109,8 @@ struct AddBubblesView: View {
     }
 }
 
-struct ChooseBubbleItemUIView_Previews: PreviewProvider {
+struct AddBubblesView_Previews: PreviewProvider {
    static var previews: some View {
-      AddBubblesView()
+       AddBubblesView(showAddBubbleModal: .constant(true))
     }
 }

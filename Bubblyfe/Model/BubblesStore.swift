@@ -11,7 +11,7 @@ import SwiftUI
 class BubblesStore :ObservableObject {
     @Published var bubbles :[Bubble] = []
         
-    var family = Bubble(category: "Family", cardColor: Color.init(red: 194/255, green: 242/255, blue: 255/255, opacity: 100), iconColor: .blue , icon: "heart.circle.fill", bubblePoints: 0, isActive: true)
+    var family = Bubble(category: "Family", cardColor: Color.init(red: 194/255, green: 242/255, blue: 255/255, opacity: 100), iconColor: .blue , icon: "heart.circle.fill", bubblePoints: 2, isActive: true)
     
     var study = Bubble(category: "Study", cardColor: Color.init(red: 1, green: 203/255, blue: 165/255, opacity: 100), iconColor: Color.init(red: 255/255, green: 110/255, blue: 4/255), icon: "books.vertical.circle.fill", bubblePoints: 0, isActive: false)
     
@@ -23,5 +23,12 @@ class BubblesStore :ObservableObject {
     
     init() {
         self.bubbles = [family, study, freeTime,friends, extra]
+    }
+    
+    func getBubblePoints() -> Int {
+        return bubbles.map({$0.bubblePoints}).reduce(0,{ x, y in
+            x + y
+        })
+        
     }
 }

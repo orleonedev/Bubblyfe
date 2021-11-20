@@ -15,13 +15,13 @@ struct BubblesView: View {
             VStack{
                 HStack{
                     Spacer()
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) { //TODO MODAL_BP
                         Image("bubblePointsGreen").foregroundColor(.green)
                         Text(String(bubbleStore.getBubblePoints()))
                             .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
                     }.padding()
                         .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
-                }
+                }.padding(.bottom)
                 
                 HStack{
                     VStack{
@@ -57,7 +57,7 @@ struct BubblesView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color("StudyIcon"))
                     }
-                }
+                }.padding(.horizontal)
                 
                 VStack{
                     ZStack{
@@ -102,33 +102,28 @@ struct BubblesView: View {
                     VStack{
                         ZStack{
                             Circle() // verde
-                                .foregroundColor(Color.init(red: 188/255, green: 248/255, blue: 143/255, opacity: 100))                            .frame(width: 72, height: 72, alignment: .center)
+                                .foregroundColor(Color("Extra"))
+                                .frame(width: 72, height: 72, alignment: .center)
                             
                             Image(systemName: "star.circle.fill")
                                 .resizable()
                                 .frame(width: 48, height: 48, alignment: .center)
-                                .foregroundColor(Color.init(red: 100/255, green: 234/255, blue: 0))
+                                .foregroundColor(Color("ExtraIcon"))
                             
                         }
                         Text("Extra")
                             .font(.title2)
                             .fontWeight(.heavy)
-                            .foregroundColor(Color(red: 100/255, green: 234/255, blue: 0/255))
+                            .foregroundColor(Color("ExtraIcon"))
                     }
                     
-                }
+                }.padding(.horizontal)
                 
                 Rectangle()
                     .frame(width: nil, height: 98, alignment: .center)
                     .foregroundColor(Color.accentColor.opacity(0.15))
                     .cornerRadius(20)
-                
-                
-                
             }.padding()
-//            .navigationTitle("Bubbles")
-//            .navigationBarItems(trailing: Image(systemName: "plus")).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
-//        }
     }
 }
 

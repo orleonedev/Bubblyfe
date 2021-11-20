@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct BubblyfeApp: App {
+    
     @StateObject var bubbleStore = BubblesStore()
+    @StateObject var activitiesStore = ActivityStore()
+    
     var body: some Scene {
         WindowGroup {
-            LaunchscreenView().environmentObject(bubbleStore) // PRIMA SCHERMATA
+            LaunchscreenView().environmentObject(bubbleStore).environmentObject(activitiesStore) // PRIMA SCHERMATA
         }
     }
 }

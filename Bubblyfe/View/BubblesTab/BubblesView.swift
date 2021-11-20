@@ -9,17 +9,20 @@ import SwiftUI
 
 struct BubblesView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
-    
+    @State var showBubblePoints = false
     var body: some View {
         
             VStack{
                 HStack{
                     Spacer()
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) { //TODO MODAL_BP
+                    Button(action: {showBubblePoints.toggle()}) {
                         Image("bubblePointsGreen").foregroundColor(.green)
                         Text(String(bubbleStore.getBubblePoints()))
                             .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
-                    }.padding()
+                    }.sheet(isPresented: $showBubblePoints, content: {
+                        BubblePointsView(showBubblePoints: $showBubblePoints)
+                    })
+                    .padding()
                         .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
                 }.padding(.bottom)
                 
@@ -38,7 +41,7 @@ struct BubblesView: View {
                             .font(.title2)
                             .fontWeight(.heavy)
                             .foregroundColor(.blue)
-                    }
+                    }.opacity(bubbleStore.family.isActive ? 1 : 0)
                     
                     Spacer()
                     
@@ -56,7 +59,7 @@ struct BubblesView: View {
                             .font(.title2)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("StudyIcon"))
-                    }
+                    }.opacity(bubbleStore.study.isActive ? 1 : 0)
                 }.padding(.horizontal)
                 
                 VStack{
@@ -75,7 +78,7 @@ struct BubblesView: View {
                         .font(.title2)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("FreetimeIcon"))
-                }
+                }.opacity(bubbleStore.freeTime.isActive ? 1 : 0)
                 
                 HStack{
                     VStack{
@@ -95,7 +98,7 @@ struct BubblesView: View {
                             .font(.title2)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("FriendsIcon"))
-                    }
+                    }.opacity(bubbleStore.friends.isActive ? 1 : 0)
                     
                     Spacer()
                     
@@ -115,7 +118,7 @@ struct BubblesView: View {
                             .font(.title2)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("ExtraIcon"))
-                    }
+                    }.opacity(bubbleStore.extra.isActive ? 1 : 0)
                     
                 }.padding(.horizontal)
                 

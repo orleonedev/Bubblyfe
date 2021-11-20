@@ -50,7 +50,7 @@ struct OnBoardingStart: View {
                     
                 }
                 HStack(alignment: .center, spacing: 12){
-                    Image("BubblePoints1")
+                    Image("BubblePointsAccent")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 50, height: 50, alignment: .center)

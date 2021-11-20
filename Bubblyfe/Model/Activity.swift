@@ -18,6 +18,6 @@ struct Activity: Identifiable {
     var image: Image? = nil
     var isCompleted: Bool = false
     var completitionDate: Date? = nil
-    var colorCard: Color
+    var cardColor: Color
     
 }

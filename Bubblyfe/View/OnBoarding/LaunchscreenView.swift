@@ -16,11 +16,11 @@ struct LaunchscreenView: View {
             VStack{
                 HStack{
                     Spacer()
-                    Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: 118, height: 48, alignment: .center)
+                    Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.1)).frame(width: 118, height: 48, alignment: .center)
                 }
                 
-                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: nil, height: 374, alignment: .center)
-                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: nil, height: 112, alignment: .center)
+                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.1)).frame(width: nil, height: 374, alignment: .center)
+                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.1)).frame(width: nil, height: 112, alignment: .center)
                 Spacer()
                 
             }

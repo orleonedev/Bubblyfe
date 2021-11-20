@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContainerView: View {
-    @EnvironmentObject var bubbleStore: BubblesStore
     var body: some View {
             TabView{
                 NavigationView{
@@ -24,8 +23,13 @@ struct ContainerView: View {
                     Text("Bubbles")
                 }.tag(1)
                     
-                
-                Activitiesv2UIView().tabItem{
+                NavigationView{
+                    ActivitiesView()
+                        .navigationTitle("Activities")
+                        .navigationBarItems( trailing: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                            Image(systemName: "plus")
+                        })
+                }.tabItem{
                     Image(systemName: "square.fill.on.square.fill")
                     Text("Activities")
                 }.tag(2)
@@ -37,28 +41,11 @@ struct ContainerView: View {
                     
                     .tabViewStyle(.page)
             }
-        
-//        TabView {
-//            BubblesView().tabItem {
-//                Image(systemName: "circle.hexagongrid.fill")
-//                Text("Bubbles")
-//            }.tag(1)
-//
-//            ChooseBubbleView().tabItem {
-//                Image(systemName: "square.fill.on.square.fill")
-//                Text("Activities") }.tag(2)
-//
-//            Text("Third").tabItem {
-//                Image(systemName: "book.closed.fill")
-//                Text("Diary") }.tag(3)
-//
-//        }
-        
     }
 }
 
 struct ContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        ContainerView().environmentObject(BubblesStore())
+        ContainerView()
     }
 }

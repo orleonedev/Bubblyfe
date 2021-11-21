@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContainerView: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
+    @EnvironmentObject var activitiesStore: ActivityStore
     var body: some View {
             TabView{
                 NavigationView{
@@ -38,7 +40,6 @@ struct ContainerView: View {
                     Image(systemName: "book.closed.fill")
                     Text("Diary")
                 }.tag(3)
-                    
                     .tabViewStyle(.page)
             }
     }
@@ -46,6 +47,6 @@ struct ContainerView: View {
 
 struct ContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        ContainerView()
+        ContainerView().environmentObject(BubblesStore()).environmentObject(ActivityStore())
     }
 }

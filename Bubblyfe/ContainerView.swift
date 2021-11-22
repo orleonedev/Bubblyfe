@@ -41,8 +41,10 @@ struct ContainerView: View {
                 NavigationView{
                     ActivitiesView()
                         .navigationTitle("Activities")
-                        .navigationBarItems( trailing: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        .navigationBarItems( trailing: Button(action: { showAddActivityModal.toggle() }) {
                             Image(systemName: "plus")
+                        }).sheet(isPresented: $showAddActivityModal, content: {
+                            AddActivitiesView(showAddActivityModal: $showAddActivityModal)
                         })
                 }.tabItem{
                     Image(systemName: "square.fill.on.square.fill")
@@ -51,7 +53,7 @@ struct ContainerView: View {
                 
                 NavigationView{
                     DiaryView()
-                        .navigationTitle("Activities")
+                        .navigationTitle("Diary")
                 }
                 .tabItem{
                     Image(systemName: "book.closed.fill")

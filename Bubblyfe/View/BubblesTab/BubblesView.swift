@@ -136,7 +136,7 @@ struct BubblesView: View {
     }
 }
 
-struct BubblesCopyUI_Previews: PreviewProvider {
+struct BubblesView_Previews: PreviewProvider {
     static var previews: some View {
         BubblesView().environmentObject(BubblesStore())
     }

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct AddActivitiesView: View {
-    
+    @EnvironmentObject var bubbleStore: BubblesStore
+    @EnvironmentObject var activitiesStore: ActivityStore
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
     @State private var ActivityTitle = "" // Variabile di stato per inserimento nome attività
     @State private var selectedBubble = Bubble.family// item selezionato
-    
+    @Binding var showAddActivityModal: Bool
     
     
     enum Bubble: String, CaseIterable, Identifiable {
@@ -87,6 +88,6 @@ struct AddActivitiesView: View {
 
 struct AddActivitiesUIView_Previews: PreviewProvider {
     static var previews: some View {
-        AddActivitiesView()
+        AddActivitiesView(showAddActivityModal: .constant(true)).environmentObject(BubblesStore()).environmentObject(ActivityStore())
     }
 }

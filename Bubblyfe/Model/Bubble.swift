@@ -16,13 +16,15 @@ class Bubble : Identifiable, ObservableObject{
     var iconColor :Color
     var icon :String
     var bubblePoints :Int
+    var isActive: Bool
     
-    internal init(category: String, cardColor :Color, iconColor :Color, icon :String, bubblePoints :Int) {
+    internal init(category: String, cardColor :Color, iconColor :Color, icon :String, bubblePoints :Int, isActive: Bool) {
         self.category = category
         self.cardColor = cardColor
         self.iconColor = iconColor
         self.icon = icon
         self.bubblePoints = bubblePoints
+        self.isActive = isActive
     }
     
 }

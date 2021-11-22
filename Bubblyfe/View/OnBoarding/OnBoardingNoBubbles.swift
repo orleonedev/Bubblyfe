@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct OnBoardingNoBubbles: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
+    @Binding var showModal: Bool
     var body: some View {
-        NavigationView{
+        
             VStack{
                 ZStack { // Creazione fiore
                                                 
@@ -47,7 +49,7 @@ struct OnBoardingNoBubbles: View {
                         .multilineTextAlignment(.center)
                     
                 }.padding(32)
-                NavigationLink(destination: AddBubblesView(), label: {
+                NavigationLink(destination: OnBoardingSelectionView(showModal: $showModal).environmentObject(bubbleStore), label: {
                     Text("Continue")
                         .padding(.horizontal, 128)
                         .padding(.vertical)
@@ -56,14 +58,15 @@ struct OnBoardingNoBubbles: View {
                 })
             }
             
-        }
-        .navigationViewStyle(.automatic)
+        
         }
         
 }
 
 struct OnBoardingNoBubbles_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingNoBubbles()
+        NavigationView{
+            OnBoardingNoBubbles(showModal: .constant(true)).environmentObject(BubblesStore())
+        }
     }
 }

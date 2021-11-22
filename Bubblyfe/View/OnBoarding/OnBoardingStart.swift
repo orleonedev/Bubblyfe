@@ -7,32 +7,22 @@
 
 import SwiftUI
 
-struct ContinueButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding(.horizontal, 128)
-            .padding(.vertical)
-            .background(Color(red: 0.251, green: 0.796, blue: 0.878))
-            .foregroundColor(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-    }
-}
-
 
 struct OnBoardingStart: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
     @Binding var showOnboardModal: Bool
     
     var body: some View {
         
         NavigationView{
-            VStack(spacing: 28){
+            VStack(spacing: 20){
                 Spacer()
                 Text("Welcome to\nBubblyfe")
                     .font(.largeTitle.bold())
                     .multilineTextAlignment(.center)
                 Spacer()
                 
-                HStack(alignment: .center, spacing: 18){
+                HStack(alignment: .center, spacing: 12){
                     Image(systemName: "circle.hexagongrid.fill")
                         .font(.system(size: 48))
                         .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
@@ -45,7 +35,7 @@ struct OnBoardingStart: View {
                     }
                     
                 }
-                HStack(alignment: .center, spacing: 18){
+                HStack(alignment: .center, spacing: 12){
                     Image(systemName: "book.closed.fill")
                         .font(.system(size: 48))
                         .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
@@ -55,11 +45,12 @@ struct OnBoardingStart: View {
                             .font(.title2.bold())
                         Text("Take track about\ncompleted activities and \ntake a moment to reflect.")
                             .fontWeight(.thin)
+                            .allowsTightening(true)
                     }
                     
                 }
-                HStack(alignment: .center, spacing: 18){
-                    Image("BubblePoints1")
+                HStack(alignment: .center, spacing: 12){
+                    Image("BubblePointsAccent")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 50, height: 50, alignment: .center)
@@ -80,7 +71,7 @@ struct OnBoardingStart: View {
                         Text("To know more about...")
                             .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
                     }
-                    NavigationLink(destination: OnBoardingNoBubbles(), label: {
+                    NavigationLink(destination: OnBoardingNoBubbles(showModal: $showOnboardModal).environmentObject(bubbleStore), label: {
                         Text("Continue")
                             .padding(.horizontal, 128)
                             .padding(.vertical)
@@ -93,12 +84,12 @@ struct OnBoardingStart: View {
                 
             }
         
-        }
+        }.navigationViewStyle(.stack)
     }
 }
 
 struct OnBoardingStart_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingStart(showOnboardModal: .constant(true))
+        OnBoardingStart(showOnboardModal: .constant(true)).environmentObject(BubblesStore())
     }
 }

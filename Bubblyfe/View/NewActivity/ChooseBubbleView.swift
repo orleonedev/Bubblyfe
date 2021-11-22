@@ -48,6 +48,7 @@ struct ChooseBubbleView: View {
     }
 
 
+
 struct ActivitiesUIView_Previews: PreviewProvider {
     static var previews: some View {
         ChooseBubbleView()

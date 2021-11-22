@@ -8,149 +8,132 @@
 import SwiftUI
 
 struct BubblesView: View {
-    
-    @State var showAddActivityModal :Bool = false
-    @State var showAddBubbleModal :Bool = false
-    
+    @EnvironmentObject var bubbleStore: BubblesStore
+    @State var showBubblePoints = false
+    @State var showAddActivityModal: Bool = false
+    @State var shoAddBubbleModal: Bool = false
     var body: some View {
         
-        NavigationView{
-            VStack(alignment: .center, spacing: 18){
+            VStack{
                 HStack{
                     Spacer()
-                    ZStack{
-                        Rectangle()
-                            .foregroundColor(Color.cyan.opacity(0.2))
-                            .cornerRadius(20)
-                    }// ZStack BP
-                    .frame(width: 118, height: 48, alignment: .center)
-                    
-                }
-                Spacer()
+                    Button(action: {showBubblePoints.toggle()}) {
+                        Image("bubblePointsGreen").foregroundColor(.green)
+                        Text(String(bubbleStore.getBubblePoints()))
+                            .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
+                    }.sheet(isPresented: $showBubblePoints, content: {
+                        BubblePointsView(showBubblePoints: $showBubblePoints)
+                    })
+                        .padding(11)
+                        .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
+                }.padding(.bottom)
+                
                 HStack{
-                    
                     VStack{
                         ZStack{
                             Circle() // celeste
-                                .foregroundColor(Color.init(red: 194/255, green: 242/255, blue: 255/255, opacity: 100)).frame(width: 72, height: 72, alignment: .center)
+                                .foregroundColor(Color("Family")).frame(width: 72, height: 72, alignment: .center)
                                 
                             Image(systemName: "heart.circle.fill")
                                 .resizable()
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color("FamilyIcon"))
                                 .frame(width: 48, height: 48, alignment: .center)
                         }
                         Text("Family")
-                            .font(.title)
+                            .font(.title2)
                             .fontWeight(.heavy)
                             .foregroundColor(.blue)
-                    }
+                    }.opacity(bubbleStore.family.isActive ? 1 : 0)
                     
                     Spacer()
                     
                     VStack{
                         ZStack{
                             Circle() // cerchio arancione
-                                .foregroundColor(Color.init(red: 1, green: 203/255, blue: 165/255, opacity: 100))              .frame(width: 72, height: 72)
+                                .foregroundColor(Color("Study"))              .frame(width: 72, height: 72)
                             
                             Image(systemName: "books.vertical.circle.fill")
                                 .resizable()
                                 .frame(width: 48, height: 48, alignment: .center)
-                                .foregroundColor(Color.init(red: 255/255, green: 110/255, blue: 4/255))
+                                .foregroundColor(Color("StudyIcon"))
                         }
                         Text("Study")
-                            .font(.title)
+                            .font(.title2)
                             .fontWeight(.heavy)
-                            .foregroundColor(Color(red: 1.0, green: 0.431, blue: 0.016))
-                    }
-                }.padding()
-                
+                            .foregroundColor(Color("StudyIcon"))
+                    }.opacity(bubbleStore.study.isActive ? 1 : 0)
+                }.padding(.horizontal)
                 
                 VStack{
                     ZStack{
                         Circle() // giallo
-                            .foregroundColor(Color.init(red: 1, green: 238/255, blue: 165/255, opacity: 100))                            .frame(width: 72, height: 72, alignment: .center)
+                            .foregroundColor(Color("Freetime"))
+                            .frame(width: 72, height: 72, alignment: .center)
                         
                         Image(systemName: "calendar.circle.fill")
                             .resizable()
                             .frame(width: 48, height: 48, alignment: .center)
-                            .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
+                            .foregroundColor(Color("FreetimeIcon"))
                         
                     }
                     Text("Free Time")
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.heavy)
-                        .foregroundColor(Color(red: 255/255, green: 207/255, blue: 0/255))
-                }
+                        .foregroundColor(Color("FreetimeIcon"))
+                }.opacity(bubbleStore.freeTime.isActive ? 1 : 0)
                 
                 HStack{
                     VStack{
                         ZStack{
                             Circle() // rosso
-                                .foregroundColor(Color.init(red: 1, green: 177/255, blue: 175/255, opacity: 100))                            .frame(width: 72, height: 72, alignment: .center)
+                                .foregroundColor(Color("Friends"))
+                                .frame(width: 72, height: 72, alignment: .center)
                             
                             
                             Image(systemName: "person.2.circle.fill")
                                 .resizable()
                                 .frame(width: 48, height: 48, alignment: .center)
-                                .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
+                                .foregroundColor(Color("FriendsIcon"))
                             
                         }
                         Text("Friends")
-                            .font(.title)
+                            .font(.title2)
                             .fontWeight(.heavy)
-                            .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
-                    }
+                            .foregroundColor(Color("FriendsIcon"))
+                    }.opacity(bubbleStore.friends.isActive ? 1 : 0)
                     
                     Spacer()
                     
                     VStack{
                         ZStack{
                             Circle() // verde
-                                .foregroundColor(Color.init(red: 188/255, green: 248/255, blue: 143/255, opacity: 100))                            .frame(width: 72, height: 72, alignment: .center)
+                                .foregroundColor(Color("Extra"))
+                                .frame(width: 72, height: 72, alignment: .center)
                             
                             Image(systemName: "star.circle.fill")
                                 .resizable()
                                 .frame(width: 48, height: 48, alignment: .center)
-                                .foregroundColor(Color.init(red: 100/255, green: 234/255, blue: 0))
+                                .foregroundColor(Color("ExtraIcon"))
                             
                         }
                         Text("Extra")
-                            .font(.title)
+                            .font(.title2)
                             .fontWeight(.heavy)
-                            .foregroundColor(Color(red: 100/255, green: 234/255, blue: 0/255))
-                    }
+                            .foregroundColor(Color("ExtraIcon"))
+                    }.opacity(bubbleStore.extra.isActive ? 1 : 0)
                     
-                }.padding()
+                }.padding(.horizontal)
                 
                 Rectangle()
-                    .frame(width: nil, height: 112, alignment: .center)
-                    .foregroundColor(Color.cyan.opacity(0.2))
+                    .frame(width: nil, height: 98, alignment: .center)
+                    .foregroundColor(Color.accentColor.opacity(0.15))
                     .cornerRadius(20)
-                
-                
-                
             }.padding()
-                .navigationTitle("Bubbles") // aggiunta titolo
-                .toolbar { // aggiunta menù
-                     ToolbarItem(placement: .navigationBarTrailing) {
-                         Menu(content: {
-                             Button("Add Bubbles", action:  {
-                                 showAddBubbleModal.toggle()
-                             }).sheet(isPresented: $showAddBubbleModal, content: {
-                                 AddBubblesView(showAddBubbleModal: $showAddBubbleModal)
-                         })
-                             Button("Add Activity", action: { showAddActivityModal.toggle()})
-                            
-                         }, label: {
-                             Image(systemName: "plus").imageScale(.large).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))})
-                      }
-                  }
-        }
     }
 }
 
 struct BubblesCopyUI_Previews: PreviewProvider {
     static var previews: some View {
-        BubblesView()
+        BubblesView().environmentObject(BubblesStore())
     }
 }

@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct LaunchscreenView: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
     @State private var showOnboardModal = false
+    @State var startView = false
     var body: some View {
         NavigationView{
             VStack{
                 HStack{
                     Spacer()
-                    Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: 118, height: 48, alignment: .center)
+                    Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.1)).frame(width: 118, height: 48, alignment: .center)
                 }
                 
-                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: nil, height: 374, alignment: .center)
-                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.2)).frame(width: nil, height: 112, alignment: .center)
+                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.1)).frame(width: nil, height: 374, alignment: .center)
+                Rectangle().cornerRadius(20).foregroundColor(.gray.opacity(0.1)).frame(width: nil, height: 112, alignment: .center)
                 Spacer()
                 
             }
@@ -26,17 +28,24 @@ struct LaunchscreenView: View {
             .navigationTitle("")
             .onAppear{
                  showOnboardModal.toggle()
-                // inserire l'apparizione della modale
-            }.sheet(isPresented: $showOnboardModal, content: {
-                    OnBoardingStart(showOnboardModal: $showOnboardModal)
+            }.sheet(isPresented: $showOnboardModal, onDismiss: {
+                startView.toggle()
+            }  , content: {
+                OnBoardingStart(showOnboardModal: $showOnboardModal).environmentObject(bubbleStore)
             })
+                .fullScreenCover(isPresented: $startView){
+                    ContainerView()
+                }
            
         }
     }
+    
 }
+
+
 
 struct LaunchscreenView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchscreenView()
+        LaunchscreenView().environmentObject(BubblesStore())
     }
 }

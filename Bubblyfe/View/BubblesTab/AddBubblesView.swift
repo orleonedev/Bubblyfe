@@ -109,8 +109,8 @@ struct AddBubblesView: View {
     }
 }
 
-struct AddBubblesView_Previews: PreviewProvider {
+struct ChooseBubbleItemUIView_Previews: PreviewProvider {
    static var previews: some View {
-       AddBubblesView(showAddBubbleModal: .constant(true))
+       AddBubblesView(showAddBubbleModal: .constant(true)).environmentObject(BubblesStore())
     }
 }

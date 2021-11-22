@@ -8,131 +8,133 @@
 import SwiftUI
 
 struct BubblePointsView: View {
+    @EnvironmentObject var bubbleStore: BubblesStore
+    @Binding var showBubblePoints: Bool
     var body: some View {
         
         NavigationView {
             
-            VStack(alignment: .center, spacing: 15) {
-                
-                // CARD CELESTE (famiglia)
-                ZStack {
+            VStack {
+                HStack{
+                    Spacer()
+                    HStack{
+                        Image("bubblePointsGreen")
+                        Text(String(bubbleStore.getBubblePoints()))
+                            .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
+                    }.padding()
+                        .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
                     
-                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
-                        .foregroundColor(Color.init(red: 194/255, green: 242/255, blue: 255/255, opacity: 100))              .frame(width: 88, height: 88, alignment: .center) // celeste (family)
-                    
-                    HStack {
+                }
+               
+                HStack {
                         Image(systemName: "heart.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .leading)
-                            .foregroundColor(.blue)
+                            .font(.largeTitle)
                         
                         Text("Family")
-                            .fontWeight(.heavy)
-                            .frame(width: 240, height: 30, alignment: .leading)
                             .font(.title)
-                            .foregroundColor(.blue)
-                    } // END HStack celeste
-                } // ENS ZStack celeste
-                
-                // CARD ARANCIONE (STUDIO)
-                ZStack {
-                
-                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top).foregroundColor(Color.init(red: 1, green: 203/255, blue: 165/255, opacity: 100)) // arancione (studio)
+                            .fontWeight(.bold)
+                            
                     
-                    HStack {
-                        Image(systemName: "books.vertical.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .center)
-                            .foregroundColor(Color.init(red: 255/255, green: 110/255, blue: 4/255))
-                        
-                        Text("Study")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color(red: 1.0, green: 0.431, blue: 0.016))
-                            .frame(width: 240, height: 30, alignment: .leading)
-                            .font(.title)
-                        
-                    } // END HStack arancione
-                } // END ZStack arancione
-                
-                
-                // ZStack GIALLO (free time)
-                ZStack {
-                    
-                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
-                        .foregroundColor(Color.init(red: 1, green: 238/255, blue: 165/255, opacity: 100)) // giallo (free time)
-                    
-                    HStack {
+                        Spacer()
+                    Image("bubblePointsBlack")
+                    Text(String(bubbleStore.family.bubblePoints))
+                        .font(.title).fontWeight(.bold)
+                }
+                    .padding()
+                    .padding(.vertical)
+                    .background(Color("Family"))
+                        .cornerRadius(25)
+
+                HStack {
                         Image(systemName: "calendar.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .center)
-                            .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
-                        
+                            .font(.largeTitle)
                         
                         Text("Free Time")
                             .font(.title)
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
-                            .frame(width: 240, height: 30, alignment: .leading)
-                            .font(.title)
-                    } // END HStack giallo
-                } // END VSTACK giallo
-                
-                
-                // VStack ROSSO (Friends)
-                ZStack {
-                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
-                        .foregroundColor(Color.init(red: 1, green: 177/255, blue: 175/255, opacity: 100)) // rosso (friends)
+                            .fontWeight(.bold)
                     
+                    Spacer()
+                    Image("bubblePointsBlack")
+                    Text(String(bubbleStore.freeTime.bubblePoints))
+                        .font(.title).fontWeight(.bold)
+                            
+                    }
+                    .padding()
+                    .padding(.vertical)
+                    .background(Color("Freetime"))
+                    .cornerRadius(25)
+                
                     HStack {
-                        Image(systemName: "person.2.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .center)
-                            .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
-                            .offset(x: 0, y: -8)
+                            Image(systemName: "person.2.circle.fill")
+                                .font(.largeTitle)
+                            
+                            Text("Friends")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                
+                        Spacer()
+                        Image("bubblePointsBlack")
+                        Text(String(bubbleStore.friends.bubblePoints))
+                            .font(.title).fontWeight(.bold)
                         
-                        Text("Friends")
+                    }
+                    .padding()
+                    .padding(.vertical)
+                        .background(Color("Friends"))
+                            .cornerRadius(25)
+                
+                HStack {
+                    Image(systemName: "books.vertical.circle.fill")
+                            .font(.largeTitle)
+                        
+                        Text("Study")
                             .font(.title)
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
-                            .offset(x: 0, y: -5)
-                            .frame(width: 240, height: 30, alignment: .leading)
-                            .font(.title)
-                    } // END HStack Rosso
-                } // END ZStack Rosso
+                            .fontWeight(.bold)
+        
+                    Spacer()
+                    Image("bubblePointsBlack")
+                    Text(String(bubbleStore.study.bubblePoints))
+                        .font(.title).fontWeight(.bold)
+                    
+                    }
+                .padding()
+                .padding(.vertical)
+                .background(Color("Study"))
+                    .cornerRadius(25)
                 
                 
-                //ZStack Verde (Extra)
-                ZStack {
-                    
-                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/).frame(width: 340, height: 100, alignment: .top)
-                        .foregroundColor(Color.init(red: 188/255, green: 248/255, blue: 143/255, opacity: 100)) // verde (extra)
-                    
-                    HStack {
-                        Image(systemName: "star.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40, alignment: .center)
-                            .foregroundColor(Color.init(red: 100/255, green: 234/255, blue: 0))
+                HStack {
+                    Image(systemName: "star.circle.fill")
+                            .font(.largeTitle)
                         
                         Text("Extra")
-                            .fontWeight(.heavy)
-                            .frame(width: 240, height: 30, alignment: .leading)
                             .font(.title)
-                            .foregroundColor(Color.init(red: 100/255, green: 234/255, blue: 0))
-                    } // END HStack Verde
-                } // END ZStack Verde
+                            .fontWeight(.bold)
+                    Spacer()
+                    Image("bubblePointsBlack")
+                    Text(String(bubbleStore.extra.bubblePoints))
+                        .font(.title).fontWeight(.bold)
+                    }
+                .padding()
+                .padding(.vertical)
+                    .background(Color("Extra"))
+                    .cornerRadius(25)
 
                 
             }.padding() // END VStack che contiene tutto
             
             .navigationTitle("Bubble Points")
-            .navigationBarItems(trailing: Image(systemName: "plus")).foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button("Done", action: {
+                showBubblePoints.toggle()
+                
+            }))
         } // END Navigation View
     }
 }
 
 struct BubblePointsUIView_Previews: PreviewProvider {
     static var previews: some View {
-        BubblePointsView()
+        BubblePointsView(showBubblePoints: .constant(true)).environmentObject(BubblesStore())
     }
 }

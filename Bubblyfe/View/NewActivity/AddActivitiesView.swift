@@ -11,6 +11,19 @@ struct AddActivitiesView: View {
     
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
     @State private var ActivityTitle = "" // Variabile di stato per inserimento nome attività
+    @State private var selectedBubble = Bubble.family// item selezionato
+    
+    
+    
+    enum Bubble: String, CaseIterable, Identifiable {
+        case family
+        case study
+        case freeTime
+        case friends
+        case extra
+        
+        var id: String { self.rawValue }
+    }
     
     var body: some View {
         NavigationView {
@@ -19,33 +32,58 @@ struct AddActivitiesView: View {
                 
                 TextField("Activity Title", text: $ActivityTitle)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
                 
-                Section {
-                    List {
-                        NavigationLink(destination: ChooseBubbleView()) {
-                            Text("Bubble")
-                        }
+                List {
+                    Picker("Bubble", selection: $selectedBubble) {
+                        HStack {
+                            Image(systemName: "heart.circle.fill")
+                            Text("Family")
+                        }.tag(Bubble.family)
+                        
+                        HStack {
+                            Image(systemName: "books.vertical.circle.fill")
+                            Text("Study")
+                        }.tag(Bubble.study)
+                        
+                        HStack {
+                            Image(systemName: "calendar.circle.fill")
+                            Text("Free Time")
+                        }.tag(Bubble.freeTime)
+                        
+                        HStack {
+                            Image(systemName: "person.2.circle.fill")
+                            Text("Friends")
+                        }.tag(Bubble.friends)
+                        
+                        HStack {
+                            Image(systemName: "star.circle.fill")
+                            Text("Extra")
+                        }.tag(Bubble.extra)
                     }
-                    
-                    TextEditor(text: $DescriptionText)
-                        .foregroundColor(.secondary)
-                        .padding(.horizontal)
-                        .lineSpacing(5)
-                        .frame(minWidth: 0, idealWidth: 1000, maxWidth: 1000, minHeight: 520, idealHeight: 400, maxHeight: 1000, alignment: .topLeading).padding()
-                    
-                    Spacer()
-
-                }
+                } // fine lista
                 
-            }
+                TextEditor(text: $DescriptionText)
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal)
+                    .lineSpacing(5)
+                    .frame(minHeight: 460, alignment: .leading)
+                    .cornerRadius(6.0)
+                    .multilineTextAlignment(.leading)
             
-            .navigationTitle("Add Activity")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: Text("Add").foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878)))
-            .navigationBarItems(leading: Text("Cancel").foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878)))
-        }// END Navigation View
-    }
+            } // End VStack
+            
+        }
+        
+        .navigationTitle("Add Activity")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailing: Text("Add").foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))).onTapGesture {
+                
+        }
+        .navigationBarItems(leading: Text("Cancel").foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878)))
+    }// END Navigation View
 }
+
 
 struct AddActivitiesUIView_Previews: PreviewProvider {
     static var previews: some View {

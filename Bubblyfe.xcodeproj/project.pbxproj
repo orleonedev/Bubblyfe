@@ -14,7 +14,7 @@
 		4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26927454F3A00315B5C /* BubblesStore.swift */; };
 		4763274E2743D04B00C19688 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274D2743D04A00C19688 /* ContainerView.swift */; };
 		476327522743D18C00C19688 /* BubblePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476327512743D18C00C19688 /* BubblePointsView.swift */; };
-		478F9E86274422C600033A85 /* ChooseBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F9E85274422C600033A85 /* ChooseBubbleView.swift */; };
+		47E57909274794AE00629E67 /* DiaryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E57908274794AE00629E67 /* DiaryUIView.swift */; };
 		510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D15162744EAAD00AC080E /* OnBoardingStart.swift */; };
 		510D1559274560D300AC080E /* OnBoardingNoBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */; };
 		511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BA6DF27440222009F7F1A /* LaunchscreenView.swift */; };
@@ -60,7 +60,7 @@
 		4718D26927454F3A00315B5C /* BubblesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesStore.swift; sourceTree = "<group>"; };
 		4763274D2743D04A00C19688 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		476327512743D18C00C19688 /* BubblePointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePointsView.swift; sourceTree = "<group>"; };
-		478F9E85274422C600033A85 /* ChooseBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBubbleView.swift; sourceTree = "<group>"; };
+		47E57908274794AE00629E67 /* DiaryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUIView.swift; sourceTree = "<group>"; };
 		510D15162744EAAD00AC080E /* OnBoardingStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStart.swift; sourceTree = "<group>"; };
 		510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingNoBubbles.swift; sourceTree = "<group>"; };
 		511BA6DF27440222009F7F1A /* LaunchscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchscreenView.swift; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 				476327512743D18C00C19688 /* BubblePointsView.swift */,
 				511BA6E127444BE9009F7F1A /* BubblesView.swift */,
 				4718D26727453C2600315B5C /* AddBubblesView.swift */,
+				47E57908274794AE00629E67 /* DiaryUIView.swift */,
 			);
 			path = BubblesTab;
 			sourceTree = "<group>";
@@ -155,7 +156,6 @@
 		5153BCDA27467559008B1705 /* NewActivity */ = {
 			isa = PBXGroup;
 			children = (
-				478F9E85274422C600033A85 /* ChooseBubbleView.swift */,
 				4718D265274525FA00315B5C /* AddActivitiesView.swift */,
 			);
 			path = NewActivity;
@@ -358,7 +358,6 @@
 				476327522743D18C00C19688 /* BubblePointsView.swift in Sources */,
 				4718D2642745207C00315B5C /* Bubble.swift in Sources */,
 				510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */,
-				478F9E86274422C600033A85 /* ChooseBubbleView.swift in Sources */,
 				4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */,
 				511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */,
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,
@@ -370,6 +369,7 @@
 				51B42B712746AE9400F4EED8 /* OnBoardingSelectionView.swift in Sources */,
 				51FEF7652749848600E8F524 /* ActivitiesView.swift in Sources */,
 				4763274E2743D04B00C19688 /* ContainerView.swift in Sources */,
+				47E57909274794AE00629E67 /* DiaryUIView.swift in Sources */,
 				510D1559274560D300AC080E /* OnBoardingNoBubbles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

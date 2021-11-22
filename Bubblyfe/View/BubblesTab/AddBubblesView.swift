@@ -9,12 +9,7 @@ import SwiftUI
 
 struct AddBubblesView: View {
     
-    @StateObject var bubblesStore = BubblesStore() // lista di bubble item
-    @State private var checkfamily :Bool = false
-    @State private var checkStudy :Bool = false
-    @State private var checkFreeTime :Bool = false
-    @State private var checkFriends :Bool = false
-    @State private var checkExtra :Bool = false
+    @EnvironmentObject var bubbleStore: BubblesStore // lista di bubble item
     @Binding var showAddBubbleModal: Bool
     
         var body: some View {
@@ -22,7 +17,7 @@ struct AddBubblesView: View {
             
             VStack(alignment: .leading) {
                 
-                Toggle(isOn: $checkfamily) { // Toggle per Family
+                Toggle(isOn: $bubbleStore.family.isActive) { // Toggle per Family
                     Image(systemName: "heart.circle.fill")
                         .resizable()
                         .foregroundColor(.blue)
@@ -37,7 +32,7 @@ struct AddBubblesView: View {
                 
                 Divider()
                 
-                Toggle(isOn: $checkStudy) { // Toggle per Study
+                Toggle(isOn: $bubbleStore.study.isActive) { // Toggle per Study
                     Image(systemName: "books.vertical.circle.fill")
                         .resizable()
                         .foregroundColor(Color.init(red: 255/255, green: 110/255, blue: 4/255))
@@ -52,7 +47,7 @@ struct AddBubblesView: View {
                 
                 Divider()
                 
-                Toggle(isOn: $checkFreeTime) { // Toggle per Study
+                Toggle(isOn: $bubbleStore.freeTime.isActive) { // Toggle per Study
                     Image(systemName: "calendar.circle.fill")
                         .resizable()
                         .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
@@ -68,7 +63,7 @@ struct AddBubblesView: View {
                 Divider()
                 
                 
-                Toggle(isOn: $checkFriends) { // Toggle per Friends
+                Toggle(isOn: $bubbleStore.friends.isActive) { // Toggle per Friends
                     Image(systemName: "person.2.circle.fill")
                         .resizable()
                         .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
@@ -83,7 +78,7 @@ struct AddBubblesView: View {
                 
                 Divider()
                 
-                Toggle(isOn: $checkExtra) { // Toggle per Extra
+                Toggle(isOn: $bubbleStore.extra.isActive) { // Toggle per Extra
                     Image(systemName: "person.2.circle.fill")
                         .resizable()
                         .foregroundColor(Color(red: 100/255, green: 234/255, blue: 0/255))

@@ -15,7 +15,10 @@ struct BubblyfeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LaunchscreenView().environmentObject(bubbleStore).environmentObject(activitiesStore) // PRIMA SCHERMATA
+            LaunchscreenView()
+                .environmentObject(bubbleStore)
+                .environmentObject(activitiesStore)
+                .preferredColorScheme(.light)// PRIMA SCHERMATA
         }
     }
 }

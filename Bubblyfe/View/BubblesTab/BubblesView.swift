@@ -20,11 +20,12 @@ struct BubblesView: View {
                     Button(action: {showBubblePoints.toggle()}) {
                         Image("bubblePointsGreen").foregroundColor(.green)
                         Text(String(bubbleStore.getBubblePoints()))
-                            .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
+                            .font(.title).fontWeight(.heavy).foregroundColor(Color("greenAccent"))
                     }.sheet(isPresented: $showBubblePoints, content: {
                         BubblePointsView(showBubblePoints: $showBubblePoints)
                     })
                         .padding(11)
+                        .padding(.horizontal, 11)
                         .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
                 }.padding(.bottom)
                 
@@ -40,7 +41,7 @@ struct BubblesView: View {
                                 .frame(width: 48, height: 48, alignment: .center)
                         }
                         Text("Family")
-                            .font(.title2)
+                            .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(.blue)
                     }.opacity(bubbleStore.family.isActive ? 1 : 0)
@@ -58,7 +59,7 @@ struct BubblesView: View {
                                 .foregroundColor(Color("StudyIcon"))
                         }
                         Text("Study")
-                            .font(.title2)
+                            .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("StudyIcon"))
                     }.opacity(bubbleStore.study.isActive ? 1 : 0)
@@ -77,7 +78,7 @@ struct BubblesView: View {
                         
                     }
                     Text("Free Time")
-                        .font(.title2)
+                        .font(.title)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("FreetimeIcon"))
                 }.opacity(bubbleStore.freeTime.isActive ? 1 : 0)
@@ -97,7 +98,7 @@ struct BubblesView: View {
                             
                         }
                         Text("Friends")
-                            .font(.title2)
+                            .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("FriendsIcon"))
                     }.opacity(bubbleStore.friends.isActive ? 1 : 0)
@@ -117,7 +118,7 @@ struct BubblesView: View {
                             
                         }
                         Text("Extra")
-                            .font(.title2)
+                            .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("ExtraIcon"))
                     }.opacity(bubbleStore.extra.isActive ? 1 : 0)

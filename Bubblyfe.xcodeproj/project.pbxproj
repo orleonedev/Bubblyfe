@@ -26,6 +26,7 @@
 		516CDCB92743C9CE00D12903 /* BubblyfeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCB82743C9CE00D12903 /* BubblyfeUITests.swift */; };
 		516CDCBB2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDCBA2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift */; };
 		516EFBB4274821A90032F495 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516EFBB3274821A90032F495 /* DiaryView.swift */; };
+		5179A1AF274BA3330088B259 /* BubbleActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179A1AE274BA3330088B259 /* BubbleActivitiesView.swift */; };
 		51B42B6D274697D500F4EED8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B6C274697D500F4EED8 /* Activity.swift */; };
 		51B42B6F27469B7100F4EED8 /* ActivityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B6E27469B7100F4EED8 /* ActivityStore.swift */; };
 		51B42B712746AE9400F4EED8 /* OnBoardingSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42B702746AE9400F4EED8 /* OnBoardingSelectionView.swift */; };
@@ -74,6 +75,7 @@
 		516CDCB82743C9CE00D12903 /* BubblyfeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeUITests.swift; sourceTree = "<group>"; };
 		516CDCBA2743C9CE00D12903 /* BubblyfeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblyfeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		516EFBB3274821A90032F495 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		5179A1AE274BA3330088B259 /* BubbleActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleActivitiesView.swift; sourceTree = "<group>"; };
 		51B42B6C274697D500F4EED8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		51B42B6E27469B7100F4EED8 /* ActivityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStore.swift; sourceTree = "<group>"; };
 		51B42B702746AE9400F4EED8 /* OnBoardingSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSelectionView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				5153BCD827467402008B1705 /* OnBoarding */,
 				516EFBB3274821A90032F495 /* DiaryView.swift */,
 				51FEF7642749848600E8F524 /* ActivitiesView.swift */,
+				5179A1AE274BA3330088B259 /* BubbleActivitiesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */,
 				511BA6E027440222009F7F1A /* LaunchscreenView.swift in Sources */,
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,
+				5179A1AF274BA3330088B259 /* BubbleActivitiesView.swift in Sources */,
 				511BA6E227444BE9009F7F1A /* BubblesView.swift in Sources */,
 				516EFBB4274821A90032F495 /* DiaryView.swift in Sources */,
 				51B42B6F27469B7100F4EED8 /* ActivityStore.swift in Sources */,

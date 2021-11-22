@@ -10,8 +10,6 @@ import SwiftUI
 struct BubblesView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
     @State var showBubblePoints = false
-    @State var showAddActivityModal: Bool = false
-    @State var shoAddBubbleModal: Bool = false
     var body: some View {
         
             VStack{
@@ -30,21 +28,26 @@ struct BubblesView: View {
                 }.padding(.bottom)
                 
                 HStack{
-                    VStack{
-                        ZStack{
-                            Circle() // celeste
-                                .foregroundColor(Color("Family")).frame(width: 72, height: 72, alignment: .center)
-                                
-                            Image(systemName: "heart.circle.fill")
-                                .resizable()
-                                .foregroundColor(Color("FamilyIcon"))
-                                .frame(width: 48, height: 48, alignment: .center)
+                    
+//                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Family"))){
+                        VStack{
+                            ZStack{
+                                Circle() // celeste
+                                    .foregroundColor(Color("Family")).frame(width: 72, height: 72, alignment: .center)
+                                    
+                                Image(systemName: "heart.circle.fill")
+                                    .resizable()
+                                    .foregroundColor(Color("FamilyIcon"))
+                                    .frame(width: 48, height: 48, alignment: .center)
+                            }
+                            Text("Family")
+                                .font(.title)
+                                .fontWeight(.heavy)
+                                .foregroundColor(.blue)
                         }
-                        Text("Family")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .foregroundColor(.blue)
-                    }.opacity(bubbleStore.family.isActive ? 1 : 0)
+                        .opacity(bubbleStore.family.isActive ? 1 : 0)
+                    
+                    
                     
                     Spacer()
                     

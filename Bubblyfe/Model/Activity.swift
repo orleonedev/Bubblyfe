@@ -15,9 +15,9 @@ struct Activity: Identifiable, Hashable{
     var category: String
     var details: String
     var reflections: String? = nil
-//    var image: Image? = nil
     var isCompleted: Bool = false
     var completitionDate: Date? = nil
     var cardColor: Color
+    var icon: String
     
 }

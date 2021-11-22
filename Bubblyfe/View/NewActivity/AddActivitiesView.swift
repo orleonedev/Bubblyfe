@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AddActivitiesView: View {
-    
+    @EnvironmentObject var bubbleStore: BubblesStore
+    @EnvironmentObject var activitiesStore: ActivityStore
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
     @State private var ActivityTitle = "" // Variabile di stato per inserimento nome attività
     @State private var selectedBubble = Bubble.family// item selezionato

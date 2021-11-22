@@ -11,7 +11,6 @@ struct OnBoardingSelectionView: View {
     
     @EnvironmentObject var bubbleStore: BubblesStore
     @Binding var showModal: Bool
-    @State var exitModal = false
     
     var body: some View {
         VStack(alignment: .leading){

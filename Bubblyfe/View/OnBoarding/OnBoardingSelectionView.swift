@@ -47,13 +47,13 @@ struct OnBoardingSelectionView: View {
             Toggle(isOn: $bubbleStore.freeTime.isActive) { // Toggle per Freetime
                 Image(systemName: "calendar.circle.fill")
                     .resizable()
-                    .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
+                    .foregroundColor(Color("FreetimeIcon"))
                     .frame(width: 28, height: 28, alignment: .center)
                 
                 Text("Free Time")
                     .bold()
                     .fontWeight(.light)
-                    .foregroundColor(Color.init(red: 255/255, green: 207/255, blue: 0))
+                    .foregroundColor(Color("FreetimeIcon"))
                     
             } // END Toggle Free Time
             
@@ -63,13 +63,13 @@ struct OnBoardingSelectionView: View {
             Toggle(isOn: $bubbleStore.friends.isActive) { // Toggle per Friends
                 Image(systemName: "person.2.circle.fill")
                     .resizable()
-                    .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
+                    .foregroundColor(Color("FriendsIcon"))
                     .frame(width: 28, height: 28, alignment: .center)
                 
                 Text("Friends")
                     .bold()
                     .fontWeight(.light)
-                    .foregroundColor(Color(hue: 1.0, saturation: 0.805, brightness: 0.998, opacity: 0.752))
+                    .foregroundColor(Color("FriendsIcon"))
             } // END Toggle Friends
             
             
@@ -78,13 +78,13 @@ struct OnBoardingSelectionView: View {
             Toggle(isOn: $bubbleStore.extra.isActive) { // Toggle per Extra
                 Image(systemName: "person.2.circle.fill")
                     .resizable()
-                    .foregroundColor(Color(red: 100/255, green: 234/255, blue: 0/255))
+                    .foregroundColor(Color("ExtraIcon"))
                     .frame(width: 28, height: 28, alignment: .center)
                 
                 Text("Extra")
                     .bold()
                     .fontWeight(.light)
-                    .foregroundColor(Color(red: 100/255, green: 234/255, blue: 0/255))
+                    .foregroundColor(Color("ExtraIcon"))
             } // END Toggle Extra
             Spacer()
         }.padding(.top,32)

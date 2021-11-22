@@ -22,8 +22,7 @@ struct ContainerView: View {
                         .toolbar{
                             ToolbarItem(placement: .navigationBarTrailing){
                                     Button(action: {
-                                        showAddBubbleModal = true
-                                        print(showAddBubbleModal)
+                                        showAddBubbleModal.toggle()
                                     }, label: {
                                         Text("Edit")
                                     }).sheet(isPresented: $showAddBubbleModal, content: {

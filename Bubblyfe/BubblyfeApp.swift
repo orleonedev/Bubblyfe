@@ -18,7 +18,8 @@ struct BubblyfeApp: App {
             LaunchscreenView()
                 .environmentObject(bubbleStore)
                 .environmentObject(activitiesStore)
-                .preferredColorScheme(.light)// PRIMA SCHERMATA
+                .preferredColorScheme(.light)
+                .previewInterfaceOrientation(.portrait)// PRIMA SCHERMATA
         }
     }
 }

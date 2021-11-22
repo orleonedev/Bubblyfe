@@ -12,6 +12,7 @@ struct ContainerView: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @State var showAddActivityModal: Bool = false
     @State var showAddBubbleModal: Bool = false
+    @State var showActivityDetailModal: Bool = false
 
     var body: some View {
             TabView{

@@ -10,7 +10,7 @@ import SwiftUI
 
 class BubblesStore :ObservableObject {
     @Published var bubbles :[Bubble] = []
-    var family = Bubble(category: "Family", cardColor: Color("Family"), iconColor: Color("FamilyIcon") , icon: "heart.circle.fill", bubblePoints: 2, isActive: false)
+    var family = Bubble(category: "Family", cardColor: Color("Family"), iconColor: Color("FamilyIcon") , icon: "heart.circle.fill", bubblePoints: 2, isActive: true)
     
     var study = Bubble(category: "Study", cardColor: Color("Study"), iconColor: Color("StudyIcon"), icon: "books.vertical.circle.fill", bubblePoints: 0, isActive: true)
     

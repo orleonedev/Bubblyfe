@@ -14,6 +14,7 @@
 		4718D26A27454F3A00315B5C /* BubblesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26927454F3A00315B5C /* BubblesStore.swift */; };
 		4763274E2743D04B00C19688 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763274D2743D04A00C19688 /* ContainerView.swift */; };
 		476327522743D18C00C19688 /* BubblePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476327512743D18C00C19688 /* BubblePointsView.swift */; };
+		47DB1BBB274BC05400A1159D /* ChooseBubbleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DB1BBA274BC05400A1159D /* ChooseBubbleUIView.swift */; };
 		47E57909274794AE00629E67 /* DiaryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E57908274794AE00629E67 /* DiaryUIView.swift */; };
 		510D15172744EAAD00AC080E /* OnBoardingStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D15162744EAAD00AC080E /* OnBoardingStart.swift */; };
 		510D1559274560D300AC080E /* OnBoardingNoBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */; };
@@ -59,6 +60,7 @@
 		4718D26927454F3A00315B5C /* BubblesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesStore.swift; sourceTree = "<group>"; };
 		4763274D2743D04A00C19688 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		476327512743D18C00C19688 /* BubblePointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePointsView.swift; sourceTree = "<group>"; };
+		47DB1BBA274BC05400A1159D /* ChooseBubbleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBubbleUIView.swift; sourceTree = "<group>"; };
 		47E57908274794AE00629E67 /* DiaryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUIView.swift; sourceTree = "<group>"; };
 		510D15162744EAAD00AC080E /* OnBoardingStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStart.swift; sourceTree = "<group>"; };
 		510D1558274560D300AC080E /* OnBoardingNoBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingNoBubbles.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				4718D265274525FA00315B5C /* AddActivitiesView.swift */,
+				47DB1BBA274BC05400A1159D /* ChooseBubbleUIView.swift */,
 			);
 			path = NewActivity;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				516CDC9E2743C9CD00D12903 /* BubblyfeApp.swift in Sources */,
 				511BA6E227444BE9009F7F1A /* BubblesView.swift in Sources */,
 				516EFBB4274821A90032F495 /* DiaryView.swift in Sources */,
+				47DB1BBB274BC05400A1159D /* ChooseBubbleUIView.swift in Sources */,
 				51B42B6F27469B7100F4EED8 /* ActivityStore.swift in Sources */,
 				4718D266274525FA00315B5C /* AddActivitiesView.swift in Sources */,
 				51B42B712746AE9400F4EED8 /* OnBoardingSelectionView.swift in Sources */,

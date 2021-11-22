@@ -12,9 +12,7 @@ struct AddActivitiesView: View {
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
     @State private var ActivityTitle = "" // Variabile di stato per inserimento nome attività
     @State private var selectedBubble = Bubble.family// item selezionato
-    
-    
-    
+
     enum Bubble: String, CaseIterable, Identifiable {
         case family
         case study
@@ -60,8 +58,8 @@ struct AddActivitiesView: View {
                             Image(systemName: "star.circle.fill")
                             Text("Extra")
                         }.tag(Bubble.extra)
-                    }
-                } // fine lista
+                    } // Fine Picker                    }
+                }
                 
                 TextEditor(text: $DescriptionText)
                     .foregroundColor(.secondary)
@@ -70,19 +68,13 @@ struct AddActivitiesView: View {
                     .frame(minHeight: 460, alignment: .leading)
                     .cornerRadius(6.0)
                     .multilineTextAlignment(.leading)
+            } // fine lista
             
-            } // End VStack
-            
-        }
+        } // End VStack
         
-        .navigationTitle("Add Activity")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(trailing: Text("Add").foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))).onTapGesture {
-                
-        }
-        .navigationBarItems(leading: Text("Cancel").foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878)))
-    }// END Navigation View
-}
+    }
+}// END Navigation View
+
 
 
 struct AddActivitiesUIView_Previews: PreviewProvider {

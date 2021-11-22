@@ -10,14 +10,27 @@ import SwiftUI
 struct ContainerView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
     @EnvironmentObject var activitiesStore: ActivityStore
+    @State var showAddActivityModal: Bool = false
+    @State var showAddBubbleModal: Bool = false
+
     var body: some View {
             TabView{
                 NavigationView{
                     BubblesView()
                         .navigationTitle("Bubbles")
-                        .navigationBarItems( trailing: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                            Image(systemName: "plus")
-                        })
+                        
+                        .toolbar{
+                            ToolbarItem(placement: .navigationBarTrailing){
+                                    Button(action: {
+                                        showAddBubbleModal = true
+                                        print(showAddBubbleModal)
+                                    }, label: {
+                                        Text("Edit")
+                                    }).sheet(isPresented: $showAddBubbleModal, content: {
+                                        AddBubblesView(showAddBubbleModal: $showAddBubbleModal)
+                                    })
+                            }
+                        }
                     
                     
                 }.tabItem{

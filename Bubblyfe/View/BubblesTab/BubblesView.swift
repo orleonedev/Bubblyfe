@@ -10,6 +10,8 @@ import SwiftUI
 struct BubblesView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
     @State var showBubblePoints = false
+    @State var showAddActivityModal: Bool = false
+    @State var shoAddBubbleModal: Bool = false
     var body: some View {
         
             VStack{
@@ -22,7 +24,7 @@ struct BubblesView: View {
                     }.sheet(isPresented: $showBubblePoints, content: {
                         BubblePointsView(showBubblePoints: $showBubblePoints)
                     })
-                    .padding()
+                        .padding(11)
                         .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
                 }.padding(.bottom)
                 

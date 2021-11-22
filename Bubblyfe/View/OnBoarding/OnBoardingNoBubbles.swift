@@ -13,6 +13,7 @@ struct OnBoardingNoBubbles: View {
     var body: some View {
         
             VStack{
+                Spacer()
                 ZStack { // Creazione fiore
                                                 
                     Circle() // arancione

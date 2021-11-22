@@ -18,7 +18,7 @@ struct BubblesView: View {
                     Button(action: {showBubblePoints.toggle()}) {
                         Image("bubblePointsGreen").foregroundColor(Color("greenAccent"))
                         Text(String(bubbleStore.getBubblePoints()))
-                            .font(.title).fontWeight(.regular).foregroundColor(Color("greenAccent"))
+                            .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
                     }.sheet(isPresented: $showBubblePoints, content: {
                         BubblePointsView(showBubblePoints: $showBubblePoints)
                     })
@@ -128,15 +128,12 @@ struct BubblesView: View {
                     
                 }.padding(.horizontal)
                 
-                ZStack{
-                    Rectangle()
-                        .frame(width: nil, height: 98, alignment: .center)
-                        .foregroundColor(Color.accentColor.opacity(0.15))
-                        .cornerRadius(20)
-                    Text("Perfectly balanced...as everything should be!")
-                        .font(.headline).fontWeight(.regular).foregroundColor(Color.black)
+                    Text("Perfectly balanced...\nas everything should be!")
+                        .font(.headline).fontWeight(.light).foregroundColor(Color.black)
+                        .multilineTextAlignment(.center)
                         .padding()
-                }
+                        .padding(.horizontal, 64)
+                        .background(RoundedRectangle(cornerRadius: 25).foregroundColor(Color.accentColor.opacity(0.1)))
                 
             }.padding()
     }

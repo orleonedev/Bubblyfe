@@ -100,6 +100,10 @@ struct AddBubblesView: View {
             
             .navigationTitle("Add Bubbles")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing:  Button("Done", action: {
+                showAddBubbleModal.toggle()
+                
+            }))
         }
     }
 }

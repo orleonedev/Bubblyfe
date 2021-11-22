@@ -19,7 +19,7 @@ struct AddActivitiesView: View {
     enum Bubble: String, CaseIterable, Identifiable {
         case Family
         case Study
-        case FreeTime
+        case Freetime
         case Friends
         case Extra
         
@@ -50,7 +50,7 @@ struct AddActivitiesView: View {
                         HStack {
                             Image(systemName: "calendar.circle.fill")
                             Text("Free Time")
-                        }.tag(Bubble.FreeTime)
+                        }.tag(Bubble.Freetime)
                         
                         HStack {
                             Image(systemName: "person.2.circle.fill")
@@ -105,6 +105,6 @@ struct AddActivitiesView: View {
 
 struct AddActivitiesUIView_Previews: PreviewProvider {
     static var previews: some View {
-        AddActivitiesView(showAddActivityModal: .constant(true))
+        AddActivitiesView(showAddActivityModal: .constant(true)).environmentObject(BubblesStore())
     }
 }

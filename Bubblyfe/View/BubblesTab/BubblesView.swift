@@ -18,15 +18,15 @@ struct BubblesView: View {
                 HStack{
                     Spacer()
                     Button(action: {showBubblePoints.toggle()}) {
-                        Image("bubblePointsGreen").foregroundColor(.green)
+                        Image("bubblePointsGreen").foregroundColor(Color("greenAccent"))
                         Text(String(bubbleStore.getBubblePoints()))
-                            .font(.title).fontWeight(.heavy).foregroundColor(Color("greenAccent"))
+                            .font(.title).fontWeight(.regular).foregroundColor(Color("greenAccent"))
                     }.sheet(isPresented: $showBubblePoints, content: {
                         BubblePointsView(showBubblePoints: $showBubblePoints)
                     })
                         .padding(11)
                         .padding(.horizontal, 11)
-                        .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
+                        .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.10)))
                 }.padding(.bottom)
                 
                 HStack{
@@ -125,10 +125,16 @@ struct BubblesView: View {
                     
                 }.padding(.horizontal)
                 
-                Rectangle()
-                    .frame(width: nil, height: 98, alignment: .center)
-                    .foregroundColor(Color.accentColor.opacity(0.15))
-                    .cornerRadius(20)
+                ZStack{
+                    Rectangle()
+                        .frame(width: nil, height: 98, alignment: .center)
+                        .foregroundColor(Color.accentColor.opacity(0.15))
+                        .cornerRadius(20)
+                    Text("Perfectly balanced...as everything should be!")
+                        .font(.headline).fontWeight(.regular).foregroundColor(Color.black)
+                        .padding()
+                }
+                
             }.padding()
     }
 }

@@ -49,6 +49,7 @@ struct OnBoardingNoBubbles: View {
                         .multilineTextAlignment(.center)
                     
                 }.padding(32)
+                Spacer()
                 NavigationLink(destination: OnBoardingSelectionView(showModal: $showModal).environmentObject(bubbleStore), label: {
                     Text("Continue")
                         .padding(.horizontal, 128)

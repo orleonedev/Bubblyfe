@@ -11,6 +11,7 @@ struct ActivitiesView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
     @EnvironmentObject var activitiesStore: ActivityStore
     @State var areCompleted: Bool = false
+//    @State var selectedActivity: Activity
 
     let columns = [
         GridItem(.flexible()),

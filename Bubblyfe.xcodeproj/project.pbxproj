@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E16568E274BEC1200167E34 /* ActivityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E16568D274BEC1200167E34 /* ActivityDetail.swift */; };
 		3E85376627466C3300FA6E05 /* Activitiesv2UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */; };
 		4718D2642745207C00315B5C /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D2632745207C00315B5C /* Bubble.swift */; };
 		4718D266274525FA00315B5C /* AddActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D265274525FA00315B5C /* AddActivitiesView.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E16568D274BEC1200167E34 /* ActivityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetail.swift; sourceTree = "<group>"; };
 		3E85376527466C3300FA6E05 /* Activitiesv2UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitiesv2UIView.swift; sourceTree = "<group>"; };
 		4718D2632745207C00315B5C /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		4718D265274525FA00315B5C /* AddActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitiesView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4718D265274525FA00315B5C /* AddActivitiesView.swift */,
+				3E16568D274BEC1200167E34 /* ActivityDetail.swift */,
 				47DB1BBA274BC05400A1159D /* ChooseBubbleUIView.swift */,
 			);
 			path = NewActivity;
@@ -357,6 +360,7 @@
 			files = (
 				4718D26827453C2600315B5C /* AddBubblesView.swift in Sources */,
 				3E85376627466C3300FA6E05 /* Activitiesv2UIView.swift in Sources */,
+				3E16568E274BEC1200167E34 /* ActivityDetail.swift in Sources */,
 				51B42B6D274697D500F4EED8 /* Activity.swift in Sources */,
 				476327522743D18C00C19688 /* BubblePointsView.swift in Sources */,
 				4718D2642745207C00315B5C /* Bubble.swift in Sources */,

@@ -1,16 +1,18 @@
 //
-//  ActivitiesView.swift
+//  BubbleActivitiesView.swift
 //  Bubblyfe
 //
-//  Created by Oreste Leone on 20/11/21.
+//  Created by Oreste Leone on 22/11/21.
 //
 
 import SwiftUI
 
-struct ActivitiesView: View {
+struct BubbleActivitiesView: View {
+    
     @EnvironmentObject var bubbleStore: BubblesStore
     @EnvironmentObject var activitiesStore: ActivityStore
     @State var areCompleted: Bool = false
+    @Binding var whichBubble: String
 
     let columns = [
         GridItem(.flexible()),
@@ -28,7 +30,7 @@ struct ActivitiesView: View {
                     .padding()
                 
                     LazyVGrid(columns: columns, spacing: 8) {
-                        ForEach(activitiesStore.activities.filter{ return $0.isCompleted == areCompleted }, id: \.self) { activity in
+                        ForEach(activitiesStore.activities.filter{ return ($0.isCompleted == areCompleted) && ($0.category == whichBubble) }, id: \.self) { activity in
                             VStack(alignment: .leading){
                                 HStack(alignment: .center, spacing: 8){
                                     Image(systemName: activity.icon)
@@ -52,8 +54,8 @@ struct ActivitiesView: View {
     }
 }
 
-struct ActivitiesView_Previews: PreviewProvider {
+struct BubbleActivitiesView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivitiesView().environmentObject(ActivityStore()).environmentObject(BubblesStore())
+        BubbleActivitiesView(whichBubble: .constant("Family")).environmentObject(ActivityStore()).environmentObject(BubblesStore())
     }
 }

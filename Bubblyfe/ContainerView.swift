@@ -49,7 +49,11 @@ struct ContainerView: View {
                     Text("Activities")
                 }.tag(2)
                 
-                DiaryView().tabItem{
+                NavigationView{
+                    DiaryView()
+                        .navigationTitle("Activities")
+                }
+                .tabItem{
                     Image(systemName: "book.closed.fill")
                     Text("Diary")
                 }.tag(3)

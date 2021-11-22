@@ -14,7 +14,7 @@ class BubblesStore :ObservableObject {
     
     var study = Bubble(category: "Study", cardColor: Color("Study"), iconColor: Color("StudyIcon"), icon: "books.vertical.circle.fill", bubblePoints: 1, isActive: true)
     
-    var freeTime = Bubble(category: "Free time", cardColor: Color("Freetime"), iconColor: Color("FreetimeIcon"), icon: "calendar.circle.fill", bubblePoints: 0, isActive: true)
+    var freeTime = Bubble(category: "FreeTime", cardColor: Color("Freetime"), iconColor: Color("FreetimeIcon"), icon: "calendar.circle.fill", bubblePoints: 0, isActive: true)
     
     var friends = Bubble(category: "Friends", cardColor: Color("Friends"), iconColor: Color("FriendsIcon"), icon: "person.2.circle.fill", bubblePoints: 0, isActive: true)
     
@@ -30,4 +30,9 @@ class BubblesStore :ObservableObject {
         })
         
     }
-}
+    
+    func getIcon(category :String) -> String {
+        
+        return (bubbles.filter{ return $0.category == category })[0].icon
+    }
+ }

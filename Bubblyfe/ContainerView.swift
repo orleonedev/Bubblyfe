@@ -44,7 +44,7 @@ struct ContainerView: View {
                         .navigationBarItems( trailing: Button(action: { showAddActivityModal.toggle() }) {
                             Image(systemName: "plus")
                         }).sheet(isPresented: $showAddActivityModal, content: {
-                            AddActivitiesView()
+                            AddActivitiesView(showAddActivityModal: $showAddActivityModal)
                         })
                 }.tabItem{
                     Image(systemName: "square.fill.on.square.fill")

@@ -12,6 +12,7 @@ struct DiaryView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
     @EnvironmentObject var activitiesStore: ActivityStore
     @State var showActivityDetailModal: Bool = false
+    @State var selectedActivity: Activity = Activity(title: "", category: "", details: "", cardColor: Color.gray, icon: "questionmark.circle.fill")
     var body: some View {
 
         ScrollView{
@@ -41,16 +42,16 @@ struct DiaryView: View {
                                             .foregroundColor(activity.cardColor))
                     }.padding(.horizontal)
                         .onTapGesture{
+                            selectedActivity = activity
                             showActivityDetailModal.toggle()
                         }
-                        .sheet(isPresented: $showActivityDetailModal, content: {
-                            ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: activity)
-                        })
                     
                 }
             }
         }
-        
+        .sheet(isPresented: $showActivityDetailModal, content: {
+            ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+        })
     }
     
     

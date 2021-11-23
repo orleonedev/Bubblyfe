@@ -12,7 +12,7 @@ struct ActivityDetail: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @Binding var showActivityDetailModal: Bool
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
-    var selectedActivity: Activity // nome attività
+    @State var selectedActivity: Activity // nome attività
     
     
     var body: some View {
@@ -101,6 +101,8 @@ struct ActivityDetail: View {
                 
                 
             }
+        }.onAppear{
+            print(selectedActivity.title)
         }
         
     }

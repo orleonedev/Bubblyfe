@@ -71,13 +71,22 @@ struct OnBoardingStart: View {
                         Text("To know more about...")
                             .foregroundColor(Color(red: 0.251, green: 0.796, blue: 0.878))
                     }
-                    NavigationLink(destination: OnBoardingNoBubbles(showModal: $showOnboardModal).environmentObject(bubbleStore), label: {
+                    Button(action: {
+                        showOnboardModal.toggle()
+                    }) {
                         Text("Continue")
                             .padding(.horizontal, 128)
                             .padding(.vertical)
                             .foregroundColor(.white)
                             .background(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                    })
+                    }
+//                    NavigationLink(destination: OnBoardingNoBubbles(showModal: $showOnboardModal).environmentObject(bubbleStore), label: {
+//                        Text("Continue")
+//                            .padding(.horizontal, 128)
+//                            .padding(.vertical)
+//                            .foregroundColor(.white)
+//                            .background(RoundedRectangle(cornerRadius: 12, style: .continuous))
+//                    })
                     
                 }
                 

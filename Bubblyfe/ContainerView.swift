@@ -20,17 +20,17 @@ struct ContainerView: View {
                     BubblesView()
                         .navigationTitle("Bubbles")
                         
-                        .toolbar{
-                            ToolbarItem(placement: .navigationBarTrailing){
-                                    Button(action: {
-                                        showAddBubbleModal.toggle()
-                                    }, label: {
-                                        Text("Edit")
-                                    }).sheet(isPresented: $showAddBubbleModal, content: {
-                                        AddBubblesView(showAddBubbleModal: $showAddBubbleModal)
-                                    })
-                            }
-                        }
+//                       .toolbar{
+//                            ToolbarItem(placement: .navigationBarTrailing){
+//                                    Button(action: {
+//                                        showAddBubbleModal.toggle()
+//                                    }, label: {
+//                                        Text("Edit")
+//                                    }).sheet(isPresented: $showAddBubbleModal, content: {
+//                                        AddBubblesView(showAddBubbleModal: $showAddBubbleModal)
+//                                    })
+//                            }
+//                        }
                     
                 }.tabItem{
                     Image(systemName: "circle.hexagongrid")

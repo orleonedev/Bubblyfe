@@ -11,6 +11,7 @@ import SwiftUI
 struct DiaryView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
     @EnvironmentObject var activitiesStore: ActivityStore
+    @State var showActivityDetailModal: Bool = false
     var body: some View {
 
         ScrollView{
@@ -39,6 +40,12 @@ struct DiaryView: View {
                             .background(RoundedRectangle(cornerRadius: 25)
                                             .foregroundColor(activity.cardColor))
                     }.padding(.horizontal)
+                        .onTapGesture{
+                            showActivityDetailModal.toggle()
+                        }
+                        .sheet(isPresented: $showActivityDetailModal, content: {
+                            ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: activity)
+                        })
                     
                 }
             }

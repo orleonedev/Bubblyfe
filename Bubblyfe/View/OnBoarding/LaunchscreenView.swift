@@ -36,7 +36,7 @@ struct LaunchscreenView: View {
                 OnBoardingStart(showOnboardModal: $showOnboardModal).environmentObject(bubbleStore)
             })
                 .fullScreenCover(isPresented: $startView){
-                    ContainerView()
+                    ContainerView().environmentObject(bubbleStore)
                 }
             
         }

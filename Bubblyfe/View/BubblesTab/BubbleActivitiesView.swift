@@ -13,6 +13,7 @@ struct BubbleActivitiesView: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @State var areCompleted: Bool = false
     @Binding var whichBubble: String
+    @State var showActivityDetailModal: Bool = false
 
     let columns = [
         GridItem(.flexible()),
@@ -37,6 +38,7 @@ struct BubbleActivitiesView: View {
                                     Text(activity.title)
                                         .font(.headline)
                                         .lineLimit(1)
+                                    Spacer()
                                 }
                                 Text(activity.details)
                                     .font(.subheadline)
@@ -45,6 +47,11 @@ struct BubbleActivitiesView: View {
                                 
                             }.padding()
                                 .background(RoundedRectangle(cornerRadius: 20).foregroundColor(activity.cardColor))
+                                .onTapGesture {
+                                    showActivityDetailModal.toggle()
+                                }.sheet(isPresented: $showActivityDetailModal, content: {
+                                    ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: activity).environmentObject(activitiesStore)
+                                })
                         }
                     }
                     .padding(.horizontal)

@@ -29,7 +29,7 @@ struct BubblesView: View {
                 
                 HStack{
                     
-                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Family")),isActive: $bubbleStore.family.isActive){
+                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Family"))){
                         VStack{
                             ZStack{
                                 Circle() // celeste
@@ -64,7 +64,8 @@ struct BubblesView: View {
                             .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("StudyIcon"))
-                    }.opacity(bubbleStore.study.isActive ? 1 : 0)
+                    }
+//                    .opacity(bubbleStore.study.isActive ? 1 : 0)
                 }
                 }.padding(.horizontal)
                 
@@ -85,7 +86,8 @@ struct BubblesView: View {
                         .font(.title)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("FreetimeIcon"))
-                }.opacity(bubbleStore.freeTime.isActive ? 1 : 0)
+                }
+//                .opacity(bubbleStore.freeTime.isActive ? 1 : 0)
                 }
                 
                 HStack{
@@ -107,7 +109,8 @@ struct BubblesView: View {
                             .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("FriendsIcon"))
-                    }.opacity(bubbleStore.friends.isActive ? 1 : 0)
+                    }
+//                    .opacity(bubbleStore.friends.isActive ? 1 : 0)
                     }
                     Spacer()
                     
@@ -128,7 +131,8 @@ struct BubblesView: View {
                             .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(Color("ExtraIcon"))
-                    }.opacity(bubbleStore.extra.isActive ? 1 : 0)
+                    }
+//                    .opacity(bubbleStore.extra.isActive ? 1 : 0)
                     }
                 }.padding(.horizontal)
                 

@@ -37,6 +37,7 @@ struct ActivitiesView: View {
                             Text(activity.title)
                                 .font(.headline)
                                 .lineLimit(1)
+                            Spacer()
                         }
                         Text(activity.details)
                             .font(.subheadline)

@@ -15,6 +15,7 @@ struct BubbleActivitiesView: View {
     @Binding var whichBubble: String
     @State var showActivityDetailModal: Bool = false
     @State var showAddActivityModal: Bool = false
+    @State var selectedActivity: Activity = Activity(title: "", category: "", details: "", cardColor: Color.gray, icon: "questionmark.circle.fill")
 
     let columns = [
         GridItem(.flexible()),
@@ -49,13 +50,15 @@ struct BubbleActivitiesView: View {
                             }.padding()
                                 .background(RoundedRectangle(cornerRadius: 20).foregroundColor(activity.cardColor))
                                 .onTapGesture {
+                                    selectedActivity = activity
                                     showActivityDetailModal.toggle()
-                                }.sheet(isPresented: $showActivityDetailModal, content: {
-                                    ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: activity).environmentObject(activitiesStore)
-                                })
+                                }
                         }
                     }
                     .padding(.horizontal)
+                    .sheet(isPresented: $showActivityDetailModal, content: {
+                        ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+                    })
                 }
             .navigationTitle(whichBubble)
         

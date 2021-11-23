@@ -13,7 +13,7 @@ struct ActivitiesView: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @State var areCompleted: Bool = false
     @State var showActivityDetailModal: Bool = false // per passare alla schermata della singola attività
-    @State var selectedActivity: Activity = Activity(title: "Study1", category: "Study", details: "Lorem ipse e m so rott o cazz", cardColor: Color("Study"), icon: "books.vertical.circle.fill")
+    @State var selectedActivity: Activity = Activity(title: "", category: "", details: "", cardColor: Color.gray, icon: "questionmark.circle.fill")
     
     let columns = [
         GridItem(.flexible()),
@@ -52,7 +52,6 @@ struct ActivitiesView: View {
                     
                         .onTapGesture {
                             print("List: \(activity)")
-                            
                             selectedActivity = activity
                             showActivityDetailModal.toggle()
                         }

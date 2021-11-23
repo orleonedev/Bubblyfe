@@ -75,7 +75,7 @@ struct DiaryActivity: View {
                         
                         HStack {
 
-                            Text(selectedActivity.reflections!)
+                            Text(selectedActivity.reflections)
                                 .font(.body)
                                 .fontWeight(.light)
                                 .padding(.vertical, 25)

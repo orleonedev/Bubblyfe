@@ -50,7 +50,7 @@ struct DiaryView: View {
             }
         }
         .sheet(isPresented: $showActivityDetailModal, content: {
-            ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+            DiaryActivity(showDiaryActivityModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
         })
     }
     

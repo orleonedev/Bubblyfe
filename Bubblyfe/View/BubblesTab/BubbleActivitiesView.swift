@@ -14,6 +14,7 @@ struct BubbleActivitiesView: View {
     @State var areCompleted: Bool = false
     @Binding var whichBubble: String
     @State var showActivityDetailModal: Bool = false
+    @State var showAddActivityModal: Bool = false
 
     let columns = [
         GridItem(.flexible()),
@@ -57,6 +58,12 @@ struct BubbleActivitiesView: View {
                     .padding(.horizontal)
                 }
             .navigationTitle(whichBubble)
+        
+            .navigationBarItems( trailing: Button(action: { showAddActivityModal.toggle() }) {
+                Image(systemName: "plus")
+            }).sheet(isPresented: $showAddActivityModal, content: {
+                AddActivitiesView(showAddActivityModal: $showAddActivityModal)
+            })
         
     }
 }

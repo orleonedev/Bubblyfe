@@ -95,8 +95,17 @@ struct ActivityDetail: View {
             }
             
                 .navigationTitle(selectedActivity.title)
-                .navigationBarItems(leading: Button(action: {showActivityDetailModal.toggle()}) {
-                    Text("Activities")
+                .navigationBarItems(leading: Button(action: {
+                        
+                    
+                    showActivityDetailModal.toggle()
+                    
+                }) {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                        Text("Activities")
+                    }
+                    
                 })
                 
                 

@@ -29,7 +29,7 @@ struct BubblesView: View {
                 
                 HStack{
                     
-//                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Family"))){
+                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Family")),isActive: $bubbleStore.family.isActive){
                         VStack{
                             ZStack{
                                 Circle() // celeste
@@ -45,12 +45,11 @@ struct BubblesView: View {
                                 .fontWeight(.heavy)
                                 .foregroundColor(.blue)
                         }
-                        .opacity(bubbleStore.family.isActive ? 1 : 0)
-                    
+                   }
                     
                     
                     Spacer()
-                    
+                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Study"))){
                     VStack{
                         ZStack{
                             Circle() // cerchio arancione
@@ -66,8 +65,10 @@ struct BubblesView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color("StudyIcon"))
                     }.opacity(bubbleStore.study.isActive ? 1 : 0)
+                }
                 }.padding(.horizontal)
                 
+                NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Freetime"))){
                 VStack{
                     ZStack{
                         Circle() // giallo
@@ -85,8 +86,10 @@ struct BubblesView: View {
                         .fontWeight(.heavy)
                         .foregroundColor(Color("FreetimeIcon"))
                 }.opacity(bubbleStore.freeTime.isActive ? 1 : 0)
+                }
                 
                 HStack{
+                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Friends"))){
                     VStack{
                         ZStack{
                             Circle() // rosso
@@ -105,9 +108,10 @@ struct BubblesView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color("FriendsIcon"))
                     }.opacity(bubbleStore.friends.isActive ? 1 : 0)
-                    
+                    }
                     Spacer()
                     
+                    NavigationLink(destination:BubbleActivitiesView(whichBubble: .constant("Extra"))){
                     VStack{
                         ZStack{
                             Circle() // verde
@@ -125,7 +129,7 @@ struct BubblesView: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color("ExtraIcon"))
                     }.opacity(bubbleStore.extra.isActive ? 1 : 0)
-                    
+                    }
                 }.padding(.horizontal)
                 
                     Text("Perfectly balanced...\nas everything should be!")

@@ -13,6 +13,7 @@ struct LaunchscreenView: View {
     @State var startView = false
     var body: some View {
         NavigationView{
+            
             VStack{
                 HStack{
                     Spacer()
@@ -30,13 +31,14 @@ struct LaunchscreenView: View {
                  showOnboardModal.toggle()
             }.sheet(isPresented: $showOnboardModal, onDismiss: {
                 startView.toggle()
+                
             }  , content: {
                 OnBoardingStart(showOnboardModal: $showOnboardModal).environmentObject(bubbleStore)
             })
                 .fullScreenCover(isPresented: $startView){
                     ContainerView()
                 }
-           
+            
         }
     }
     

@@ -49,7 +49,7 @@ struct BubbleActivitiesView: View {
                     }
                     .padding(.horizontal)
                 }
-            
+            .navigationTitle(whichBubble)
         
     }
 }

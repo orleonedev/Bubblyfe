@@ -32,7 +32,6 @@ struct ContainerView: View {
                             }
                         }
                     
-                    
                 }.tabItem{
                     Image(systemName: "circle.hexagongrid")
                     Text("Bubbles")

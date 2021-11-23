@@ -58,11 +58,13 @@ struct ActivitiesView: View {
                         
                 }
             }
+            .padding(.horizontal)
+            .sheet(isPresented: $showActivityDetailModal, content: {
+                ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+            })
         }
-        .sheet(isPresented: $showActivityDetailModal, content: {
-            ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
-        })
-        .padding(.horizontal)
+        
+        
     }
     
     

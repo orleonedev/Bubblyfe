@@ -15,6 +15,7 @@ struct BubbleActivitiesView: View {
     @Binding var whichBubble: String
     @State var showActivityDetailModal: Bool = false
     @State var showAddActivityModal: Bool = false
+    @State var showDiaryActivityModal: Bool = false
     @State var selectedActivity: Activity = Activity(title: "", category: "", details: "", cardColor: Color.gray, icon: "questionmark.circle.fill")
 
     let columns = [
@@ -34,7 +35,7 @@ struct BubbleActivitiesView: View {
                 
                     LazyVGrid(columns: columns, spacing: 8) {
                         ForEach(activitiesStore.activities.filter{ return ($0.isCompleted == areCompleted) && ($0.category == whichBubble) }, id: \.self) { activity in
-                            VStack(alignment: .leading){
+                            VStack(alignment: .leading,spacing: 8){
                                 HStack(alignment: .center, spacing: 8){
                                     Image(systemName: activity.icon)
                                     Text(activity.title)
@@ -45,19 +46,26 @@ struct BubbleActivitiesView: View {
                                 Text(activity.details)
                                     .font(.subheadline)
                                     .fontWeight(.light)
-                                    .lineLimit(2)
-                                Spacer()
+                                    .lineLimit(1)
+                                
                             }.padding()
                                 .background(RoundedRectangle(cornerRadius: 20).foregroundColor(activity.cardColor))
                                 .onTapGesture {
                                     selectedActivity = activity
-                                    showActivityDetailModal.toggle()
+                                    if !selectedActivity.isCompleted{
+                                        showActivityDetailModal.toggle()
+                                    }else{
+                                        showDiaryActivityModal.toggle()
+                                    }
                                 }
                         }
                     }
                     .padding(.horizontal)
                     .sheet(isPresented: $showActivityDetailModal, content: {
                         ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+                    })
+                    .sheet(isPresented: $showDiaryActivityModal, content: {
+                        DiaryActivity(showDiaryActivityModal: $showDiaryActivityModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
                     })
                 }
             .navigationTitle(whichBubble)

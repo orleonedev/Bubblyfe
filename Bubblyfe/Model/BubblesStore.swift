@@ -35,4 +35,21 @@ class BubblesStore :ObservableObject {
         
         return (bubbles.filter{ return $0.category == category })[0].icon
     }
+    
+    func addBubblePoints(category: String){
+        switch category{
+        case "Family":
+            family.bubblePoints += 1
+        case "Study":
+            study.bubblePoints += 1
+        case "Freetime":
+            freeTime.bubblePoints += 1
+        case "Friends":
+            friends.bubblePoints += 1
+        case "Extra":
+            extra.bubblePoints += 1
+        default:
+            print("Something went wrong adding BP to \(category)")
+        }
+    }
  }

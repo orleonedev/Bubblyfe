@@ -12,7 +12,7 @@ struct ActivityDetail: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @Binding var showActivityDetailModal: Bool
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
-    var selectedActivity: Activity // nome attività
+    @State var selectedActivity: Activity // nome attività
     
     
     var body: some View {
@@ -36,7 +36,7 @@ struct ActivityDetail: View {
                         Spacer()
                     } // END categoria
                     .padding(.horizontal, 20)
-                    .background(Color(selectedActivity.category))
+                    .background(selectedActivity.cardColor)
                     .cornerRadius(20)
                     .padding(.horizontal, 12)
                     
@@ -60,7 +60,7 @@ struct ActivityDetail: View {
                             Spacer()
                         }
                         .padding(.horizontal, 20)
-                        .background(Color(selectedActivity.category))
+                        .background(selectedActivity.cardColor)
                         .cornerRadius(20)
                         .padding(.horizontal, 12)
                         
@@ -73,29 +73,35 @@ struct ActivityDetail: View {
                         .bold()
                         .font(.title3)
                         .fontWeight(.light)
-                        .padding(.vertical, 5)
                         .padding(.horizontal, 20)
                     
-                    Divider()
                     
-                   
-                        Form{
+                    
+                    VStack{
+                        
                         TextEditor(text: $DescriptionText)
-                            .lineSpacing(5)
-                            .frame(minHeight: 300, alignment: .leading)
-                            .lineLimit(20)
+                            .lineLimit(10)
                             .multilineTextAlignment(.leading)
-                        }.background()
-
+                            
+                    }.padding()
+                        
+                        .background(RoundedRectangle(cornerRadius: 25).foregroundColor(selectedActivity.cardColor))
+                        
                     
-//                    .padding(.horizontal, 20)
-//                    .padding(.vertical, 20)
-                    .cornerRadius(6.0)
                     
-                    Divider()
             } // END primo VSTACK
                 
                 Button {
+//                    selectedActivity.isCompleted = true
+//                    selectedActivity.completitionDate = Date.now
+//                    selectedActivity.reflections = DescriptionText
+//
+                    print("Detail: \(selectedActivity)")
+                    activitiesStore.activities.remove(at: (activitiesStore.activities.firstIndex(of: selectedActivity)!))
+                    activitiesStore.addActivity(titl: selectedActivity.title, cate: selectedActivity.category, det: selectedActivity.details, cardCol: Color(selectedActivity.category).opacity(0.3), ico: selectedActivity.icon, refl: DescriptionText, compl: true, dat: Date.now)
+                    bubbleStore.addBubblePoints(category: selectedActivity.category)
+                    
+                    showActivityDetailModal.toggle()
                     
                 } label: {
                     HStack {
@@ -109,6 +115,8 @@ struct ActivityDetail: View {
                     .foregroundColor(Color("greenAccent"))
                     
                 }
+                Text("You can earn Bubble Points this way!")
+                    .font(.subheadline).fontWeight(.light).foregroundColor(.secondary)
             
                 .navigationTitle(selectedActivity.title)
                 .navigationBarItems(leading: Button(action: {
@@ -117,11 +125,7 @@ struct ActivityDetail: View {
                     showActivityDetailModal.toggle()
                     
                 }) {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        Text("Activities")
-                    }
-                    
+                        Text("Back")
                 })
                 
                 

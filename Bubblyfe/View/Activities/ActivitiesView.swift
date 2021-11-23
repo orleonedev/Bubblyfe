@@ -13,6 +13,7 @@ struct ActivitiesView: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @State var areCompleted: Bool = false
     @State var showActivityDetailModal: Bool = false // per passare alla schermata della singola attività
+    @State var showDiaryActivityModal: Bool = false
     @State var selectedActivity: Activity = Activity(title: "", category: "", details: "", cardColor: Color.gray, icon: "questionmark.circle.fill")
     
     let columns = [
@@ -33,7 +34,7 @@ struct ActivitiesView: View {
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(activitiesStore.activities.filter{ return $0.isCompleted == areCompleted }) { activity in
                     
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading,spacing: 8){
                         HStack(alignment: .center, spacing: 8){
                             Image(systemName: activity.icon)
                             Text(activity.title)
@@ -44,8 +45,7 @@ struct ActivitiesView: View {
                         Text(activity.details)
                             .font(.subheadline)
                             .fontWeight(.light)
-                            .lineLimit(2)
-                        Spacer()
+                            .lineLimit(1)
                         
                     }.padding()
                         .background(RoundedRectangle(cornerRadius: 20).foregroundColor(activity.cardColor))
@@ -53,7 +53,12 @@ struct ActivitiesView: View {
                         .onTapGesture {
                             print("List: \(activity)")
                             selectedActivity = activity
-                            showActivityDetailModal.toggle()
+                            if !selectedActivity.isCompleted{
+                                showActivityDetailModal.toggle()
+                            }else{
+                                showDiaryActivityModal.toggle()
+                            }
+                            
                         }
                         
                 }
@@ -61,6 +66,9 @@ struct ActivitiesView: View {
             .padding(.horizontal)
             .sheet(isPresented: $showActivityDetailModal, content: {
                 ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+            })
+            .sheet(isPresented: $showDiaryActivityModal, content: {
+                DiaryActivity(showDiaryActivityModal: $showDiaryActivityModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
             })
         }
         

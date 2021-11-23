@@ -17,8 +17,8 @@ struct BubblesView: View {
                     Spacer()
                     Button(action: {showBubblePoints.toggle()}) {
                         Image("bubblePointsGreen").foregroundColor(Color("greenAccent"))
-                        Text(String(bubbleStore.getBubblePoints()))
-                            .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
+//                        Text(String(bubbleStore.getBubblePoints()))
+//                            .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
                     }.sheet(isPresented: $showBubblePoints, content: {
                         BubblePointsView(showBubblePoints: $showBubblePoints)
                     })

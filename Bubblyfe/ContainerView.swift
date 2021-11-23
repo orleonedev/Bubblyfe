@@ -17,7 +17,7 @@ struct ContainerView: View {
     var body: some View {
             TabView{
                 NavigationView{
-                    BubblesView()
+                    BubblesView().environmentObject(bubbleStore).environmentObject(activitiesStore)
                         .navigationTitle("Bubbles")
                         
 //                       .toolbar{

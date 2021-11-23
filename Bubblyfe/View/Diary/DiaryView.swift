@@ -11,7 +11,7 @@ import SwiftUI
 struct DiaryView: View {
     @EnvironmentObject var bubbleStore: BubblesStore
     @EnvironmentObject var activitiesStore: ActivityStore
-    @State var showActivityDetailModal: Bool = false
+    @State var showDiaryActivityModal: Bool = false
     @State var selectedActivity: Activity = Activity(title: "", category: "", details: "", cardColor: Color.gray, icon: "questionmark.circle.fill")
     var body: some View {
 
@@ -43,14 +43,14 @@ struct DiaryView: View {
                     }.padding(.horizontal)
                         .onTapGesture{
                             selectedActivity = activity
-                            showActivityDetailModal.toggle()
+                            showDiaryActivityModal.toggle()
                         }
                     
                 }
             }
         }
-        .sheet(isPresented: $showActivityDetailModal, content: {
-            DiaryActivity(showDiaryActivityModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+        .sheet(isPresented: $showDiaryActivityModal, content: {
+            DiaryActivity(showDiaryActivityModal: $showDiaryActivityModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
         })
     }
     

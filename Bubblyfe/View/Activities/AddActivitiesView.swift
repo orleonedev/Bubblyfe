@@ -86,7 +86,7 @@ struct AddActivitiesView: View {
             
             .navigationTitle("Add Activity").navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button(action: {
-                activitiesStore.addActivity(titl: ActivityTitle, cate: selectedBubble.rawValue, det: DescriptionText, cardCol: Color(selectedBubble.rawValue), ico: bubbleStore.getIcon(category: selectedBubble.rawValue))
+                activitiesStore.addActivity(titl: ActivityTitle, cate: selectedBubble.rawValue, det: DescriptionText, cardCol: Color(selectedBubble.rawValue), ico: bubbleStore.getIcon(category: selectedBubble.rawValue), refl: "", compl: false, dat: nil)
                 showAddActivityModal.toggle()
             }) {
                 Text("Done")

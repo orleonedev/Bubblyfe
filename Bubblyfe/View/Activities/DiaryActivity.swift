@@ -35,7 +35,7 @@ struct DiaryActivity: View {
                         Spacer()
                     }
                     .padding(.horizontal, 20)
-                    .background(Color(selectedActivity.category))
+                    .background(selectedActivity.cardColor)
                     .cornerRadius(20)
                     .padding(.horizontal, 12)
                     
@@ -59,7 +59,7 @@ struct DiaryActivity: View {
                             Spacer()
                         }
                         .padding(.horizontal, 20)
-                        .background(Color(selectedActivity.category))
+                        .background(selectedActivity.cardColor)
                         .cornerRadius(20)
                         .padding(.horizontal, 12)
                     }
@@ -83,7 +83,7 @@ struct DiaryActivity: View {
                             Spacer()
                         }
                         .padding(.horizontal, 20)
-                        .background(Color(selectedActivity.category))
+                        .background(selectedActivity.cardColor)
                         .cornerRadius(20)
                         .padding(.horizontal, 12)
                     }
@@ -99,10 +99,7 @@ struct DiaryActivity: View {
                     showDiaryActivityModal.toggle()
                     
                 }) {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        Text("Activities")
-                    }
+                        Text("Back")
                     
                 })
                 

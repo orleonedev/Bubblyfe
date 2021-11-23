@@ -45,7 +45,7 @@ struct BubbleActivitiesView: View {
                                     .font(.subheadline)
                                     .fontWeight(.light)
                                     .lineLimit(2)
-                                
+                                Spacer()
                             }.padding()
                                 .background(RoundedRectangle(cornerRadius: 20).foregroundColor(activity.cardColor))
                                 .onTapGesture {

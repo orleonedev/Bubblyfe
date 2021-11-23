@@ -12,7 +12,7 @@ struct ActivityDetail: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @Binding var showActivityDetailModal: Bool
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
-    @State var selectedActivity: Activity // nome attività
+    var selectedActivity: Activity // nome attività
     
     
     var body: some View {
@@ -41,7 +41,7 @@ struct ActivityDetail: View {
                     
                     
                     HStack {
-
+                        
                         Text(selectedActivity.details)
                             .font(.body)
                             .fontWeight(.light)
@@ -67,16 +67,16 @@ struct ActivityDetail: View {
                         TextEditor(text: $DescriptionText)
                             .lineSpacing(5)
                             .frame(minHeight: 300, alignment: .leading)
-                            
+                        
                             .multilineTextAlignment(.leading)
-                            
+                        
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 20)
                     .cornerRadius(6.0)
                     
                     Divider()
-
+                    
                     Button {
                         
                     } label: {
@@ -92,11 +92,11 @@ struct ActivityDetail: View {
                         
                         
                     }
-            }
-            
+                }
+                
                 .navigationTitle(selectedActivity.title)
                 .navigationBarItems(leading: Button(action: {
-                        
+                    
                     
                     showActivityDetailModal.toggle()
                     
@@ -111,7 +111,7 @@ struct ActivityDetail: View {
                 
             }
         }.onAppear{
-            print(selectedActivity.title)
+            print("Detail: \(selectedActivity)")
         }
         
     }

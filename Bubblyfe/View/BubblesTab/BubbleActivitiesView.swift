@@ -62,11 +62,8 @@ struct BubbleActivitiesView: View {
                         }
                     }
                     .padding(.horizontal)
-                    .sheet(isPresented: $showActivityDetailModal,onDismiss: {
-                        bpadded = BpAdded(title: "Bubble Point earned!", descr: "You just earned a Bubble Point for completing that activity!")
-                     }
-                            , content: {
-                        ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: $selectedActivity).environmentObject(activitiesStore)
+                    .sheet(isPresented: $showActivityDetailModal, content: {
+                        ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: $selectedActivity, bpadded: $bpadded).environmentObject(activitiesStore)
                     })
                     .sheet(isPresented: $showDiaryActivityModal, content: {
                         DiaryActivity(showDiaryActivityModal: $showDiaryActivityModal, selectedActivity: $selectedActivity).environmentObject(activitiesStore)

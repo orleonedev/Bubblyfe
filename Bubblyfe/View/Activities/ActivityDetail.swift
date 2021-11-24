@@ -13,6 +13,9 @@ struct ActivityDetail: View {
     @Binding var showActivityDetailModal: Bool
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
     @Binding var selectedActivity: Activity // nome attività
+    @Binding var bpadded: BpAdded?
+    let generator = UINotificationFeedbackGenerator()
+
     
     var body: some View {
         
@@ -89,16 +92,12 @@ struct ActivityDetail: View {
             } // END primo VSTACK
         }
                 Button {
-//                    selectedActivity.isCompleted = true
-//                    selectedActivity.completitionDate = Date.now
-//                    selectedActivity.reflections = DescriptionText
-//
                     print("Detail: \(selectedActivity)")
                     activitiesStore.activities.remove(at: (activitiesStore.activities.firstIndex(of: selectedActivity)!))
                     activitiesStore.addActivity(titl: selectedActivity.title, cate: selectedActivity.category, det: selectedActivity.details, cardCol: Color(selectedActivity.category).opacity(0.3), ico: selectedActivity.icon, refl: DescriptionText, compl: true, dat: Date.now)
                     bubbleStore.addBubblePoints(category: selectedActivity.category)
-                    
-                    showActivityDetailModal.toggle()
+                    generator.notificationOccurred(.error)
+                    bpadded = BpAdded(title: "Bubble Point earned!", descr: "You just earned a Bubble Point for completing that activity!")
                     
                 } label: {
                     HStack {
@@ -115,20 +114,25 @@ struct ActivityDetail: View {
                 Text("You can earn Bubble Points this way!")
                     .font(.subheadline).fontWeight(.light).foregroundColor(.secondary)
             
-                .navigationTitle(selectedActivity.title)
-                .navigationBarItems(leading: Button(action: {
-                        
-                    
-                    showActivityDetailModal.toggle()
-                    
-                }) {
-                        Text("Back")
-                })
+                
                 
                 
             }
-        }.onAppear{
-            print(selectedActivity.title)
+            .alert(item: $bpadded) {
+                details in
+                Alert(title: Text(details.title),
+                      message: Text(details.descr),
+                      dismissButton: .default(Text("Ok"), action: {showActivityDetailModal.toggle()}))
+            }
+            .navigationTitle(selectedActivity.title)
+            .navigationBarItems(leading: Button(action: {
+                    
+                
+                showActivityDetailModal.toggle()
+                
+            }) {
+                    Text("Back")
+            })
         }
         
     }

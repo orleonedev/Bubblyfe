@@ -12,7 +12,7 @@ struct BubblesView: View {
     @State var showBubblePoints = false
     var body: some View {
         
-        VStack(spacing: 32){
+        VStack(spacing: 25){
                 HStack{
                     Spacer()
                     Button(action: {showBubblePoints.toggle()}) {

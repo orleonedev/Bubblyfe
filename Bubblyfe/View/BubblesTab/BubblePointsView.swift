@@ -23,8 +23,7 @@ struct BubblePointsView: View {
                             .font(.title).fontWeight(.bold).foregroundColor(Color("greenAccent"))
                     }.padding()
                         .background(RoundedRectangle(cornerRadius: 25, style: .continuous).foregroundColor(.accentColor.opacity(0.15)))
-                    
-                }
+                }.padding(.vertical)
                
                 HStack {
                         Image(systemName: "heart.circle.fill")

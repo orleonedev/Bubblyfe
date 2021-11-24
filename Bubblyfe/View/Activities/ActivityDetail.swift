@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ActivityDetail: View {
     @EnvironmentObject var bubbleStore: BubblesStore
@@ -15,6 +16,8 @@ struct ActivityDetail: View {
     @Binding var selectedActivity: Activity // nome attività
     @Binding var bpadded: BpAdded?
     let generator = UINotificationFeedbackGenerator()
+    
+    @State var audioCoin3: AVAudioPlayer?
 
     
     var body: some View {
@@ -122,7 +125,10 @@ struct ActivityDetail: View {
                 details in
                 Alert(title: Text(details.title),
                       message: Text(details.descr),
-                      dismissButton: .default(Text("Ok"), action: {showActivityDetailModal.toggle()}))
+                      dismissButton: .default(Text("Ok"), action: {startCoin3()
+                    showActivityDetailModal.toggle()
+                    
+                }))
             }
             .navigationTitle(selectedActivity.title)
             .navigationBarItems(leading: Button(action: {
@@ -136,6 +142,24 @@ struct ActivityDetail: View {
         }
         
     }
+    
+    func startCoin3(){
+        if let audioURL = Bundle.main.url(forResource: "coin3", withExtension: "wav") {
+            do {
+                try audioCoin3 = AVAudioPlayer(contentsOf: audioURL) /// make the audio player
+                audioCoin3?.numberOfLoops = .max /// Number of times to loop the audio
+                audioCoin3?.play() /// start playing
+                audioCoin3?.setVolume(0.2, fadeDuration: 0)
+                
+            } catch {
+                print("Couldn't play audio. Error: \(error)")
+            }
+            
+        } else {
+            print("No audio file found")
+        }
+    }
+    
 }
 
 //struct ActivityDetail_Previews: PreviewProvider {

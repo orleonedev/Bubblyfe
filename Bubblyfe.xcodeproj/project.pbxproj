@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E16568E274BEC1200167E34 /* ActivityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E16568D274BEC1200167E34 /* ActivityDetail.swift */; };
+		3E918588274E5711001E15A3 /* coin3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E918587274E5711001E15A3 /* coin3.wav */; };
 		4718D2642745207C00315B5C /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D2632745207C00315B5C /* Bubble.swift */; };
 		4718D266274525FA00315B5C /* AddActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D265274525FA00315B5C /* AddActivitiesView.swift */; };
 		4718D26827453C2600315B5C /* AddBubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718D26727453C2600315B5C /* AddBubblesView.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		3E16568D274BEC1200167E34 /* ActivityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetail.swift; sourceTree = "<group>"; };
+		3E918587274E5711001E15A3 /* coin3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin3.wav; sourceTree = "<group>"; };
 		4718D2632745207C00315B5C /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		4718D265274525FA00315B5C /* AddActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitiesView.swift; sourceTree = "<group>"; };
 		4718D26727453C2600315B5C /* AddBubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBubblesView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		5153BCDA27467559008B1705 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				3E918587274E5711001E15A3 /* coin3.wav */,
 				4718D265274525FA00315B5C /* AddActivitiesView.swift */,
 				3E16568D274BEC1200167E34 /* ActivityDetail.swift */,
 				47DB1BBE274D391500A1159D /* DiaryActivity.swift */,
@@ -335,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E918588274E5711001E15A3 /* coin3.wav in Resources */,
 				516CDCA52743C9CE00D12903 /* Preview Assets.xcassets in Resources */,
 				516CDCA22743C9CE00D12903 /* Assets.xcassets in Resources */,
 			);
@@ -545,7 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bubblyfe/Preview Content\"";
-				DEVELOPMENT_TEAM = SA4H49C4LT;
+				DEVELOPMENT_TEAM = T74HYBPW22;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -580,7 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bubblyfe/Preview Content\"";
-				DEVELOPMENT_TEAM = SA4H49C4LT;
+				DEVELOPMENT_TEAM = T74HYBPW22;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

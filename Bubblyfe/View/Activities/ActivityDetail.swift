@@ -12,8 +12,7 @@ struct ActivityDetail: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @Binding var showActivityDetailModal: Bool
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
-    @State var selectedActivity: Activity // nome attività
-    
+    @Binding var selectedActivity: Activity // nome attività
     
     var body: some View {
         
@@ -137,8 +136,8 @@ struct ActivityDetail: View {
     }
 }
 
-struct ActivityDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivityDetail(showActivityDetailModal: .constant(true), selectedActivity: ActivityStore().study1active ).environmentObject(BubblesStore()).environmentObject(ActivityStore())
-    }
-}
+//struct ActivityDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ActivityDetail(showActivityDetailModal: .constant(true), selectedActivity: ActivityStore().study1active ).environmentObject(BubblesStore()).environmentObject(ActivityStore())
+//    }
+//}

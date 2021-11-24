@@ -13,7 +13,7 @@ struct DiaryActivity: View {
     @EnvironmentObject var activitiesStore: ActivityStore
     @Binding var showDiaryActivityModal: Bool
     @State private var DescriptionText = "" // Variabile di stato per inserimento testo
-    @State var selectedActivity: Activity // nome attività
+    @Binding var selectedActivity: Activity // nome attività
     
     var body: some View {
         NavigationView {
@@ -111,8 +111,8 @@ struct DiaryActivity: View {
     }
 }
 
-struct DiaryActivity_Previews: PreviewProvider {
-    static var previews: some View {
-        DiaryActivity(showDiaryActivityModal: .constant(true), selectedActivity: ActivityStore().family1done).environmentObject(ActivityStore()).environmentObject(BubblesStore())
-    }
-}
+//struct DiaryActivity_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DiaryActivity(showDiaryActivityModal: .constant(true), selectedActivity: ActivityStore().family1done).environmentObject(ActivityStore()).environmentObject(BubblesStore())
+//    }
+//}

@@ -62,10 +62,10 @@ struct BubbleActivitiesView: View {
                     }
                     .padding(.horizontal)
                     .sheet(isPresented: $showActivityDetailModal, content: {
-                        ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+                        ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: $selectedActivity).environmentObject(activitiesStore)
                     })
                     .sheet(isPresented: $showDiaryActivityModal, content: {
-                        DiaryActivity(showDiaryActivityModal: $showDiaryActivityModal, selectedActivity: selectedActivity).environmentObject(activitiesStore)
+                        DiaryActivity(showDiaryActivityModal: $showDiaryActivityModal, selectedActivity: $selectedActivity).environmentObject(activitiesStore)
                     })
                 }
             .navigationTitle(whichBubble)

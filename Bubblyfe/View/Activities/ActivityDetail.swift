@@ -19,6 +19,7 @@ struct ActivityDetail: View {
         NavigationView {
             
             VStack(alignment: .center) {
+                ScrollView{
                 VStack (alignment: .leading, spacing: 10) {
                     
                     HStack { // Categoria
@@ -74,22 +75,19 @@ struct ActivityDetail: View {
                         .fontWeight(.light)
                         .padding(.horizontal, 20)
                     
-                    
-                    
                     VStack{
-                        
-                        TextEditor(text: $DescriptionText)
-                            .lineLimit(10)
-                            .multilineTextAlignment(.leading)
-                            
-                    }.padding()
-                        
-                        .background(RoundedRectangle(cornerRadius: 25).foregroundColor(selectedActivity.cardColor))
+                        TextField("What are your reflections about your activity?",text: $DescriptionText)
+                                .lineLimit(10)
+                                .multilineTextAlignment(.leading)
+                                .padding()
+                                .background(RoundedRectangle(cornerRadius: 20).foregroundColor(selectedActivity.cardColor))
+                    }.padding(.horizontal)
+                    
                         
                     
                     
             } // END primo VSTACK
-                
+        }
                 Button {
 //                    selectedActivity.isCompleted = true
 //                    selectedActivity.completitionDate = Date.now

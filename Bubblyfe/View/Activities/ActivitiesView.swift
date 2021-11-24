@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+struct BpAdded : Identifiable {
+    var id: String{title}
+    var title: String
+    var descr: String
+    
+}
+
 struct ActivitiesView: View {
     
     @EnvironmentObject var bubbleStore: BubblesStore
@@ -15,6 +22,7 @@ struct ActivitiesView: View {
     @State var showActivityDetailModal: Bool = false // per passare alla schermata della singola attività
     @State var showDiaryActivityModal: Bool = false
     @State var selectedActivity: Activity = Activity(title: "", category: "", details: "", cardColor: Color.gray, icon: "questionmark.circle.fill")
+    @State var bpadded: BpAdded?
     
     let columns = [
         GridItem(.flexible()),
@@ -64,16 +72,39 @@ struct ActivitiesView: View {
                 }
             }
             .padding(.horizontal)
-            .sheet(isPresented: $showActivityDetailModal, content: {
+            .sheet(isPresented: $showActivityDetailModal,
+                   onDismiss: {
+               bpadded = BpAdded(title: "Bubble Point earned!", descr: "You just earned a Bubble Point for completing that activity!")
+            }
+                   ,content: {
                 ActivityDetail(showActivityDetailModal: $showActivityDetailModal, selectedActivity: $selectedActivity).environmentObject(activitiesStore)
             })
             .sheet(isPresented: $showDiaryActivityModal, content: {
                 DiaryActivity(showDiaryActivityModal: $showDiaryActivityModal, selectedActivity: $selectedActivity).environmentObject(activitiesStore)
             })
+            .alert(item: $bpadded) {
+                details in
+                Alert(title: Text(details.title),
+                      message: Text(details.descr),
+                        dismissButton: .default(Text("Ok")))
+            }
         }
         
         
     }
+    
+//    func showAlertButtonTapped(_ sender: UIButton) {
+//
+//            // create the alert
+//            let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: UIAlertController.Style.alert)
+//
+//            // add an action (button)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//
+//            // show the alert
+//
+//            self.present(alert, animated: true)
+//    }
     
     
 }
